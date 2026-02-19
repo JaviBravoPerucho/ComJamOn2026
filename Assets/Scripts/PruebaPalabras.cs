@@ -14,7 +14,7 @@ public class PruebaPalabras : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            Test();
+            GetComponent<WordManager>().TryWord(palabra);
         }
     }
 
