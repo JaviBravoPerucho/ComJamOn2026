@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 
 public class WordManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class WordManager : MonoBehaviour
     public int MaxLength { get; private set; }
 
     string vocales = "aeiou";
+
+    private HashSet<string> palabrasUsadas = new HashSet<string>();
 
     void Start()
     {
@@ -56,6 +59,14 @@ public class WordManager : MonoBehaviour
             Debug.Log("La palabra no existe");
             return false;
         }
+
+        if (palabrasUsadas.Contains(palabra))
+        {
+            Debug.Log("Palabra ya usada");
+            return false;
+        }
+
+        palabrasUsadas.Add(palabra);
 
         //  Generar siguiente sílaba
         SilabaActual = GenerarNuevaSilaba(palabra);
