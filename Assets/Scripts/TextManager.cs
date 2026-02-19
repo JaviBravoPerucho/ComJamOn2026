@@ -22,6 +22,7 @@ public class TextManager : MonoBehaviour
     public TMP_Text contadorLongitud;
     public TMP_Text siguienteSilaba;
     public TMP_Text rangoLongitud;
+    public TMP_Text lineIndex;
 
     private WordManager wordManager;
 
@@ -150,7 +151,7 @@ public class TextManager : MonoBehaviour
     private void AvanzarDeLinea(NivelPrograma programaActual)
     {
         lineaActualIndex++;
-
+        lineIndex.text += lineaActualIndex.ToString()+"\n";
         // Si hemos llegado al final del programa actual
         if (lineaActualIndex >= programaActual.secuenciaLineas.Length)
         {
@@ -174,6 +175,6 @@ public class TextManager : MonoBehaviour
     private void ActualizarUIWordManager()
     {
         siguienteSilaba.text = wordManager.SilabaActual;
-        rangoLongitud.text = "(" + wordManager.MinLength + "-" + wordManager.MaxLength + ")";
+        rangoLongitud.text = "(Min " + wordManager.MinLength + "-Max " + wordManager.MaxLength + ")";
     }
 }

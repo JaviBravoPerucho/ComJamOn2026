@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
 
     public int Level;
 
+    public Transform manilla;
+    public float gameTime = 60.0f;
+    private float elapsedTime = 0;
+
     private void Awake()
     {
         // Si ya existe una instancia y no somos nosotros, nos destruimos
@@ -31,6 +35,12 @@ public class GameManager : MonoBehaviour
     {
         // Inicialización de variables o lógica de inicio
         Level = 0; // 1-fede / 2-Tony / 3-Pedro
+    }
+
+    private void Update()
+    {
+        elapsedTime += Time.deltaTime;
+        manilla.rotation = Quaternion.Euler(0, 0, -(elapsedTime / gameTime) * 360);
     }
 
     private void ResetPoints()
