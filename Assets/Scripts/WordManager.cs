@@ -19,7 +19,7 @@ public class WordManager : MonoBehaviour
         if (primeraVez)
         {
             // Generar sílaba inicial aleatoria (consonante + vocal)
-            string consonantes = "bcdfglmnpqrstv";
+            string consonantes = "bcdfglmnprstv";
             char c = consonantes[Random.Range(0, consonantes.Length)];
             char v = vocales[Random.Range(0, vocales.Length)];
             SilabaActual = (c.ToString() + v.ToString()).ToLower();
