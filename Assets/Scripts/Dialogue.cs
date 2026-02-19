@@ -45,7 +45,7 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         // Ejemplo de uso al inicio:
-        // LanzarDialogo(TipoDialogo.Saludo);
+        LanzarDialogo(TipoDialogo.Preparate);
     }
 
     // 3. Método público para llamar al diálogo pasándole el enum
