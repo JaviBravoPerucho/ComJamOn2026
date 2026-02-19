@@ -12,6 +12,24 @@ public class TextManager : MonoBehaviour
 
     private WordManager wordManager;
 
+    [System.Serializable] // Esto es vital para que se vea en el Inspector
+    public class ConfiguracionTexto
+    {
+        public string palabraClave;
+        public Color colorAsociado;
+    }
+
+    // Tu array de pares [string, color]
+    public ConfiguracionTexto[] misConfiguraciones = new ConfiguracionTexto[]
+    {
+        new ConfiguracionTexto { palabraClave = "#include ", colorAsociado = new Color(0f, 0.2f,0f,1f) },
+        new ConfiguracionTexto { palabraClave = "#include ", colorAsociado = new Color(0f, 0.2f,0f,1f) },
+        new ConfiguracionTexto { palabraClave = "\n"+"class ", colorAsociado = new Color(0f, 0f,0.2f,1f) },
+        new ConfiguracionTexto { palabraClave = "\tint ", colorAsociado = new Color(0f, 0f,0.2f,1f) }
+    };
+
+    private int configIndex = 0;
+
     private void Start()
     {
         wordManager = GetComponent<WordManager>();
@@ -45,8 +63,12 @@ public class TextManager : MonoBehaviour
 
     public void EnviarTexto()
     {
-        // Pasamos el texto del input al texto de la escena
-        textoDestino.text += "\n"+campoEntrada.text;
+        if (configIndex >= misConfiguraciones.Length) return;
+
+        textoDestino.color = misConfiguraciones[configIndex].colorAsociado;
+        textoDestino.text += misConfiguraciones[configIndex].palabraClave + campoEntrada.text + "\n";
+
+        configIndex++;
 
         // Opcional: Limpiar la caja después de enviar
         campoEntrada.text = "";
