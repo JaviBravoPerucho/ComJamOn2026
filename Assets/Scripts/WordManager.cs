@@ -41,7 +41,7 @@ public class WordManager : MonoBehaviour
 
     public bool TryWord(string palabra)
     {
-        palabra = palabra.ToLower();
+        palabra = LoadWords.Instance.QuitarTildes(palabra).ToLower();
 
         //  Chequear longitud
         if (palabra.Length < MinLength || palabra.Length > MaxLength)
