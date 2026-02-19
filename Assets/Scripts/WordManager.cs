@@ -12,7 +12,7 @@ public class WordManager : MonoBehaviour
 
     private HashSet<string> palabrasUsadas = new HashSet<string>();
 
-    void Start()
+    void Awake()
     {
         GenerarNuevaRonda(true);
     }
