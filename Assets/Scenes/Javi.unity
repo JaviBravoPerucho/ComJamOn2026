@@ -417,8 +417,8 @@ MonoBehaviour:
     colorPalabraClave: {r: 0.4269758, g: 0.64593726, b: 0.9528302, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 2
-    palabraClave: "\nint main() {\n\t"
-    colorPalabraClave: {r: 0, g: 0, b: 0.8, a: 1}
+    palabraClave: "\nmain\n\t"
+    colorPalabraClave: {r: 0.7759698, g: 0.8, b: 0, a: 1}
     colorInput: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   - tipo: 3
     palabraClave: '
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
+  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
