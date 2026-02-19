@@ -407,17 +407,46 @@ MonoBehaviour:
   contadorLongitud: {fileID: 2094339793}
   siguienteSilaba: {fileID: 2109783953}
   rangoLongitud: {fileID: 854048845}
-  misConfiguraciones:
-  - palabraClave: '#include '
-    colorAsociado: {r: 0, g: 0.2, b: 0, a: 1}
-  - palabraClave: '#include '
-    colorAsociado: {r: 0, g: 0.2, b: 0, a: 1}
-  - palabraClave: '
+  diccionarioSintaxis:
+  - tipo: 0
+    palabraClave: '#include '
+    colorPalabraClave: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
+    colorInput: {r: 0.9622642, g: 0.68765575, b: 0.41304737, a: 1}
+  - tipo: 1
+    palabraClave: 'using namespace '
+    colorPalabraClave: {r: 0.4269758, g: 0.64593726, b: 0.9528302, a: 1}
+    colorInput: {r: 1, g: 1, b: 1, a: 1}
+  - tipo: 2
+    palabraClave: "\nint main() {\n\t"
+    colorPalabraClave: {r: 0, g: 0, b: 0.8, a: 1}
+    colorInput: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  - tipo: 3
+    palabraClave: '
 
       class '
-    colorAsociado: {r: 0, g: 0, b: 0.2, a: 1}
-  - palabraClave: "\tint "
-    colorAsociado: {r: 0, g: 0, b: 0.2, a: 1}
+    colorPalabraClave: {r: 0, g: 0, b: 0.8, a: 1}
+    colorInput: {r: 1, g: 0.8, b: 0, a: 1}
+  - tipo: 4
+    palabraClave: "\tint "
+    colorPalabraClave: {r: 0, g: 0, b: 0.8, a: 1}
+    colorInput: {r: 1, g: 1, b: 1, a: 1}
+  - tipo: 5
+    palabraClave: "\tstd::cout << "
+    colorPalabraClave: {r: 0, g: 0.5, b: 0.5, a: 1}
+    colorInput: {r: 1, g: 0.5, b: 0.5, a: 1}
+  - tipo: 6
+    palabraClave: "\treturn "
+    colorPalabraClave: {r: 0, g: 0, b: 0.8, a: 1}
+    colorInput: {r: 0.8, g: 0.8, b: 0, a: 1}
+  - tipo: 7
+    palabraClave: '}'
+    colorPalabraClave: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    colorInput: {r: 0, g: 0, b: 0, a: 0}
+  misProgramas:
+  - nombreDelPrograma: Hola Mundo
+    secuenciaLineas: 000000000100000002000000050000000600000007000000
+  - nombreDelPrograma: Clase Jugador
+    secuenciaLineas: 0000000003000000040000000400000007000000
 --- !u!4 &334344274
 Transform:
   m_ObjectHideFlags: 0

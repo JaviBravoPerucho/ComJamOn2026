@@ -1,56 +1,112 @@
 using UnityEngine;
-using TMPro; // Importante para usar TextMeshPro
+using TMPro;
+
+// 1. Enumeración con todos los tipos de líneas que puedes tener en C++
+public enum TipoInstruccionCpp
+{
+    Include,
+    Namespace,
+    Main,
+    ClaseDef,
+    VariableInt,
+    PrintConsola,
+    ReturnCero,
+    CierreBloque
+}
 
 public class TextManager : MonoBehaviour
 {
-    public TMP_InputField campoEntrada; // La caja donde escribes
-    public TMP_Text textoDestino;      // Donde aparecerá la palabra
+    [Header("Referencias UI")]
+    public TMP_InputField campoEntrada;
+    public TMP_Text textoDestino;
     public TMP_Text contadorLongitud;
     public TMP_Text siguienteSilaba;
     public TMP_Text rangoLongitud;
 
-
     private WordManager wordManager;
 
-    [System.Serializable] // Esto es vital para que se vea en el Inspector
-    public class ConfiguracionTexto
+    // 2. Definición visual (Palabras y colores)
+    [System.Serializable]
+    public class DefinicionSintaxis
     {
+        public TipoInstruccionCpp tipo;
         public string palabraClave;
-        public Color colorAsociado;
+        public Color colorPalabraClave;
+        public Color colorInput;
     }
 
-    // Tu array de pares [string, color]
-    public ConfiguracionTexto[] misConfiguraciones = new ConfiguracionTexto[]
+    // 3. Estructura de cada "Programa" o nivel
+    [System.Serializable]
+    public class NivelPrograma
     {
-        new ConfiguracionTexto { palabraClave = "#include ", colorAsociado = new Color(0f, 0.2f,0f,1f) },
-        new ConfiguracionTexto { palabraClave = "#include ", colorAsociado = new Color(0f, 0.2f,0f,1f) },
-        new ConfiguracionTexto { palabraClave = "\n"+"class ", colorAsociado = new Color(0f, 0f,0.2f,1f) },
-        new ConfiguracionTexto { palabraClave = "\tint ", colorAsociado = new Color(0f, 0f,0.2f,1f) }
+        public string nombreDelPrograma;
+        public TipoInstruccionCpp[] secuenciaLineas; // Aquí solo eliges el orden
+    }
+
+    [Header("Diccionario de Sintaxis (Define una sola vez)")]
+    public DefinicionSintaxis[] diccionarioSintaxis = new DefinicionSintaxis[]
+    {
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.Include, palabraClave = "#include ", colorPalabraClave = new Color(0f, 0.6f, 0f, 1f), colorInput = new Color(0.8f, 0.4f, 0f, 1f) },
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.Namespace, palabraClave = "\nusing namespace ", colorPalabraClave = new Color(0f, 0f, 0.8f, 1f), colorInput = new Color(1f, 1f, 1f, 1f) },
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.Main, palabraClave = "\nint main() {\n\t", colorPalabraClave = new Color(0f, 0f, 0.8f, 1f), colorInput = new Color(0.5f, 0.5f, 0.5f, 1f) },
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.ClaseDef, palabraClave = "\nclass ", colorPalabraClave = new Color(0f, 0f, 0.8f, 1f), colorInput = new Color(1f, 0.8f, 0f, 1f) },
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.VariableInt, palabraClave = "\tint ", colorPalabraClave = new Color(0f, 0f, 0.8f, 1f), colorInput = new Color(1f, 1f, 1f, 1f) },
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.PrintConsola, palabraClave = "\tstd::cout << ", colorPalabraClave = new Color(0f, 0.5f, 0.5f, 1f), colorInput = new Color(1f, 0.5f, 0.5f, 1f) },
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.ReturnCero, palabraClave = "\treturn ", colorPalabraClave = new Color(0f, 0f, 0.8f, 1f), colorInput = new Color(0.8f, 0.8f, 0f, 1f) },
+        new DefinicionSintaxis { tipo = TipoInstruccionCpp.CierreBloque, palabraClave = "}", colorPalabraClave = new Color(0.5f, 0.5f, 0.5f, 1f), colorInput = new Color(0f, 0f, 0f, 0f) } // Input invisible si no se necesita
     };
 
-    private int configIndex = 0;
+    [Header("Tus Programas (Niveles)")]
+    public NivelPrograma[] misProgramas = new NivelPrograma[]
+    {
+        // Programa 1
+        new NivelPrograma {
+            nombreDelPrograma = "Hola Mundo",
+            secuenciaLineas = new TipoInstruccionCpp[] {
+                TipoInstruccionCpp.Include,      // Escribirá: <iostream>
+                TipoInstruccionCpp.Namespace,    // Escribirá: std;
+                TipoInstruccionCpp.Main,         // Escribirá: //inicio
+                TipoInstruccionCpp.PrintConsola, // Escribirá: "Hola";
+                TipoInstruccionCpp.ReturnCero,   // Escribirá: 0;
+                TipoInstruccionCpp.CierreBloque  // Escribirá: //fin
+            }
+        },
+        // Programa 2
+        new NivelPrograma {
+            nombreDelPrograma = "Clase Jugador",
+            secuenciaLineas = new TipoInstruccionCpp[] {
+                TipoInstruccionCpp.Include,
+                TipoInstruccionCpp.ClaseDef,
+                TipoInstruccionCpp.VariableInt,
+                TipoInstruccionCpp.VariableInt,
+                TipoInstruccionCpp.CierreBloque
+            }
+        }
+    };
+
+    // Control de progreso
+    private int programaActualIndex = 0;
+    private int lineaActualIndex = 0;
 
     private void Start()
     {
         wordManager = GetComponent<WordManager>();
 
         campoEntrada.onValueChanged.AddListener(ActualizarContador);
-        siguienteSilaba.text = wordManager.SilabaActual;
-        rangoLongitud.text = "(" + wordManager.MinLength + "-" + wordManager.MaxLength + ")";
+        ActualizarUIWordManager();
     }
 
     void Update()
     {
-        // Detecta si presionas Enter o el Enter del teclado numérico
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            if(wordManager.TryWord(campoEntrada.text))EnviarTexto();
+            if (wordManager.TryWord(campoEntrada.text))
+            {
+                EnviarTexto();
+            }
             else
             {
-                // Opcional: Limpiar la caja después de enviar
                 campoEntrada.text = "";
-
-                // Opcional: Volver a poner el foco en la caja para seguir escribiendo
                 campoEntrada.ActivateInputField();
             }
         }
@@ -63,21 +119,61 @@ public class TextManager : MonoBehaviour
 
     public void EnviarTexto()
     {
-        if (configIndex >= misConfiguraciones.Length) return;
+        // Si ya terminamos todos los programas, no hacemos nada
+        if (programaActualIndex >= misProgramas.Length) return;
 
-        textoDestino.color = misConfiguraciones[configIndex].colorAsociado;
-        textoDestino.text += misConfiguraciones[configIndex].palabraClave + campoEntrada.text + "\n";
+        NivelPrograma programaActual = misProgramas[programaActualIndex];
 
-        configIndex++;
+        // Obtenemos qué tipo de instrucción toca en este momento
+        TipoInstruccionCpp tipoActual = programaActual.secuenciaLineas[lineaActualIndex];
 
-        // Opcional: Limpiar la caja después de enviar
+        // Buscamos la configuración visual de esa instrucción en el diccionario
+        DefinicionSintaxis sintaxis = ObtenerSintaxis(tipoActual);
+
+        if (sintaxis != null)
+        {
+            string hexClave = ColorUtility.ToHtmlStringRGBA(sintaxis.colorPalabraClave);
+            string hexInput = ColorUtility.ToHtmlStringRGBA(sintaxis.colorInput);
+
+            string nuevaLinea = $"<color=#{hexClave}>{sintaxis.palabraClave}</color><color=#{hexInput}>{campoEntrada.text}</color>\n";
+            textoDestino.text += nuevaLinea;
+        }
+
+        AvanzarDeLinea(programaActual);
+
+        // Limpieza y reseteo
         campoEntrada.text = "";
-
-        // Opcional: Volver a poner el foco en la caja para seguir escribiendo
         campoEntrada.ActivateInputField();
+        ActualizarUIWordManager();
+    }
 
+    private void AvanzarDeLinea(NivelPrograma programaActual)
+    {
+        lineaActualIndex++;
+
+        // Si hemos llegado al final del programa actual
+        if (lineaActualIndex >= programaActual.secuenciaLineas.Length)
+        {
+            textoDestino.text += "\n<color=#00FF00>--- FIN DEL PROGRAMA: " + programaActual.nombreDelPrograma.ToUpper() + " ---</color>\n\n";
+            lineaActualIndex = 0;
+            programaActualIndex++;
+        }
+    }
+
+    // Busca en el array de diccionario el tipo de instrucción correspondiente
+    private DefinicionSintaxis ObtenerSintaxis(TipoInstruccionCpp tipoBuscado)
+    {
+        foreach (var def in diccionarioSintaxis)
+        {
+            if (def.tipo == tipoBuscado) return def;
+        }
+        Debug.LogWarning("No se encontró configuración para la instrucción: " + tipoBuscado);
+        return null;
+    }
+
+    private void ActualizarUIWordManager()
+    {
         siguienteSilaba.text = wordManager.SilabaActual;
-
         rangoLongitud.text = "(" + wordManager.MinLength + "-" + wordManager.MaxLength + ")";
     }
 }
