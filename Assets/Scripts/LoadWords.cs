@@ -10,6 +10,9 @@ public class LoadWords : MonoBehaviour
 
     private HashSet<string> palabras;
 
+    string consonantes = "bcdfglmnprstvz";
+    string vocales = "aeiou";
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -74,6 +77,16 @@ public class LoadWords : MonoBehaviour
 
         if (!limpia.Contains(","))
         {
+            if (vocales.Contains(limpia[limpia.Length - 1]))
+            {
+                string pluralVocal = limpia + "s";
+                palabras.Add(pluralVocal);
+            }
+            else if (consonantes.Contains(limpia[limpia.Length - 1]))
+            {
+                string pluralConsonante = limpia + "es";
+                palabras.Add(pluralConsonante);
+            }
             palabras.Add(limpia);
             return;
         }
@@ -84,6 +97,16 @@ public class LoadWords : MonoBehaviour
         string baseWord = partes[0].Trim();
         palabras.Add(baseWord);
 
+        if (vocales.Contains(baseWord[baseWord.Length - 1])){
+            string pluralVocal = baseWord + "s";
+            palabras.Add(pluralVocal);
+        }
+        else if(consonantes.Contains(baseWord[baseWord.Length - 1]))
+        {
+            string pluralConsonante = baseWord + "es";
+            palabras.Add(pluralConsonante);
+        }
+
         for (int i = 1; i < partes.Length; i++)
         {
             string sufijo = partes[i].Trim();
@@ -93,6 +116,17 @@ public class LoadWords : MonoBehaviour
 
             string variante = GenerarVariante(baseWord, sufijo);
             palabras.Add(variante);
+
+            if (vocales.Contains(variante[variante.Length - 1]))
+            {
+                string pluralVocal = variante + "s";
+                palabras.Add(pluralVocal);
+            }
+            else if (consonantes.Contains(variante[variante.Length - 1]))
+            {
+                string pluralConsonante = variante + "es";
+                palabras.Add(pluralConsonante);
+            }
         }
     }
 
