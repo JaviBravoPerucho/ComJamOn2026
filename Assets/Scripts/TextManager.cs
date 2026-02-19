@@ -175,6 +175,6 @@ public class TextManager : MonoBehaviour
     private void ActualizarUIWordManager()
     {
         siguienteSilaba.text = wordManager.SilabaActual;
-        rangoLongitud.text = "(Min " + wordManager.MinLength + "-Max " + wordManager.MaxLength + ")";
+        rangoLongitud.text = "(Min " + wordManager.MinLength + " - Max " + wordManager.MaxLength + ")";
     }
 }

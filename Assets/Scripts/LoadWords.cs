@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
+using System.Globalization;
+using System.Text;
 using System.Text.RegularExpressions;
+using UnityEngine;
 
 public class LoadWords : MonoBehaviour
 {
@@ -39,6 +41,28 @@ public class LoadWords : MonoBehaviour
 
         Debug.Log("Palabras cargadas: " + palabras.Count);
     }
+    public string QuitarTildes(string texto)
+    {
+        // 1. Normalizamos el texto (separa la letra del acento)
+        string textoNormalizado = texto.Normalize(NormalizationForm.FormD);
+
+        StringBuilder sb = new StringBuilder();
+
+        foreach (char c in textoNormalizado)
+        {
+            // 2. Comprobamos si el carácter es una categoría de "marca" (como un acento)
+            UnicodeCategory uc = CharUnicodeInfo.GetUnicodeCategory(c);
+
+            // 3. Si NO es un acento, lo añadimos al resultado
+            if (uc != UnicodeCategory.NonSpacingMark)
+            {
+                sb.Append(c);
+            }
+        }
+
+        // 4. Devolvemos el texto ya limpio
+        return sb.ToString().Normalize(NormalizationForm.FormC);
+    }
 
     void ProcesarLinea(string linea)
     {
@@ -46,7 +70,7 @@ public class LoadWords : MonoBehaviour
             return;
 
         // Quitar números al final (cocha1 → cocha)
-        string limpia = QuitarNumerosFinal(linea);
+        string limpia = QuitarNumerosFinal(QuitarTildes(linea));
 
         if (!limpia.Contains(","))
         {

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
 using UnityEngine;
 
 
@@ -34,6 +36,8 @@ public class WordManager : MonoBehaviour
 
         Debug.Log($"Nueva ronda - Sílaba: {SilabaActual} | Min: {MinLength} | Max: {MaxLength}");
     }
+
+
 
     public bool TryWord(string palabra)
     {
