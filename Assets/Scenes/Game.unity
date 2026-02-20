@@ -708,6 +708,7 @@ GameObject:
   - component: {fileID: 334344273}
   - component: {fileID: 334344275}
   - component: {fileID: 334344276}
+  - component: {fileID: 334344277}
   m_Layer: 0
   m_Name: WordManager
   m_TagString: Untagged
@@ -824,6 +825,20 @@ MonoBehaviour:
   lineInterval: 0.08
   compileDuration: 5
   dialogue: {fileID: 47909503}
+--- !u!114 &334344277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334344272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64131bf143a2f504c8fb7aae5aacf938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToShow: 3
+  notaPanel: {fileID: 2044121858}
 --- !u!1 &472015695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1694,10 @@ PrefabInstance:
       propertyPath: gameTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5914200897358089359, guid: 40f275c638118454f8c547e3bb689475, type: 3}
+      propertyPath: PanelNota
+      value: 
+      objectReference: {fileID: 2044121858}
     - target: {fileID: 5914200897358089359, guid: 40f275c638118454f8c547e3bb689475, type: 3}
       propertyPath: Puntuacion
       value: 2

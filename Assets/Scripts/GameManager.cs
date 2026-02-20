@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
 
     // Variables globales de ejemplo
     public int Puntuacion;
-    public GameObject PanelNota;
 
     public int Level;
 
     public bool JuegoIniciado;
+    public bool JuegoAcabado;
 
     private void Awake()
     {
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         JuegoIniciado = false;
+        JuegoAcabado = false;
         // Asignamos la instancia
         Instance = this;
 
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadGame(int level)
     {
+        JuegoAcabado = false;
         Level = level;
         ResetPoints(); // Opcional: reiniciar puntos al empezar partida
         SceneManager.LoadScene("Game");
@@ -75,6 +77,6 @@ public class GameManager : MonoBehaviour
         if (endedProgram) Puntuacion = 5;
         else Puntuacion = 0;
 
-        PanelNota.SetActive(true);
+        JuegoAcabado = true;
     }
 }
