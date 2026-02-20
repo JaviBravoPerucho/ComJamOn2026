@@ -14,6 +14,7 @@ public enum TipoDialogo
     PalabraMal,
     SeAcaboExamen,
     Compilar,
+    Corrigiendo,
     BuenaNota,
     NotaMedia,
     NotaMala

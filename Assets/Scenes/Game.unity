@@ -191,6 +191,12 @@ MonoBehaviour:
     - 'Espero que no haya errores.
 
 '
+  - tipo: 7
+    posiblesLineas:
+    - Buen programita el que te has montando.
+    - 'Probablemente te ponga buena nota
+
+'
   dialoguePanel: {fileID: 1125222282}
   dialogueText: {fileID: 930253147}
   timeToLetter: 0.05
@@ -796,6 +802,7 @@ MonoBehaviour:
   consoleText: {fileID: 1721588642}
   lineInterval: 0.08
   compileDuration: 5
+  dialogue: {fileID: 47909503}
 --- !u!1 &472015695
 GameObject:
   m_ObjectHideFlags: 0

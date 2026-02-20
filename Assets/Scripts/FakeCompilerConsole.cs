@@ -8,6 +8,7 @@ public class FakeCompilerConsole : MonoBehaviour
     [SerializeField] private TMP_Text consoleText;
     [SerializeField] private float lineInterval = 0.08f;
     [SerializeField] private float compileDuration = 3f; // duración en segundos
+    [SerializeField] private Dialogue dialogue;
 
     private Queue<string> lines = new Queue<string>();
     List<string> wordList;
@@ -41,6 +42,11 @@ public class FakeCompilerConsole : MonoBehaviour
             consoleText.text = string.Join("\n", lines);
 
             yield return new WaitForSeconds(lineInterval);
+        }
+
+        if (dialogue)
+        {
+            dialogue.LanzarDialogo(TipoDialogo.Corrigiendo);
         }
 
         // Al terminar simplemente salimos.
