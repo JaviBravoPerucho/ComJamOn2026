@@ -38,6 +38,9 @@ public class TextManager : MonoBehaviour
     [SerializeField]
     private GameObject buttonCompile;
 
+    [SerializeField]
+    private Dialogue dialogue;
+
     // 2. Definición visual (Palabras y colores)
     [System.Serializable]
     public class DefinicionSintaxis
@@ -183,6 +186,10 @@ public class TextManager : MonoBehaviour
             if (GetComponent<FakeCompilerConsole>())
             {
                 GetComponent<FakeCompilerConsole>().StartCompilation();
+            }
+            if (dialogue)
+            {
+                dialogue.LanzarDialogo(TipoDialogo.SeAcaboExamen);
             }
             GameManager.Instance.JuegoIniciado = false;
             //programaActualIndex++;

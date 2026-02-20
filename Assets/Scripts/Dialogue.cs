@@ -13,6 +13,7 @@ public enum TipoDialogo
     PalabraSilabaIncorrecta,
     PalabraMal,
     SeAcaboExamen,
+    Compilar,
     BuenaNota,
     NotaMedia,
     NotaMala
@@ -52,6 +53,11 @@ public class Dialogue : MonoBehaviour
     public void EmpezarExamen()
     {
         LanzarDialogo(TipoDialogo.Comenzar);
+    }
+
+    public void CompilarExamen()
+    {
+        LanzarDialogo(TipoDialogo.Compilar);
     }
 
     // 3. Método público para llamar al diálogo pasándole el enum
