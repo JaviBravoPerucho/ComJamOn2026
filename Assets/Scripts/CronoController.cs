@@ -30,6 +30,7 @@ public class CronoController : MonoBehaviour
         if (actualTime >= maxTime)
         {
             actualTime = maxTime;
+            GameManager.Instance.GameOver();
         }
 
         if (fill)
