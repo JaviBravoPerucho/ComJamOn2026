@@ -153,10 +153,19 @@ MonoBehaviour:
     posiblesLineas:
     - Bienvenido mi preciado alumno, espero que estes utilizando narratech.
     - "\xBFEstas listo para hacer un \xE1rbol de comportamiento?"
+    - "Adelante, toma asiento, el examen comenzar\xE1 pronto.\n"
   - tipo: 2
     posiblesLineas:
     - Eres la cabra.
-    - Me mola.
+    - Parece que has estudiado y todo.
+    - 'Me gusta esa respuesta.
+
+'
+    - "T\xFA si le sabes a Unity."
+    - 'Te voy a tener que contratar en Narratech.
+
+'
+    - Vas bien de tiempo.
   - tipo: 3
     posiblesLineas:
     - Esa ya la has dicho.
@@ -165,16 +174,24 @@ MonoBehaviour:
     posiblesLineas:
     - Lee bien la longitud chaval.
     - Longitud incorrecta.
+    - "\xA1El rango!, mira el rango.\n"
   - tipo: 6
     posiblesLineas:
     - Esa te la has inventado fijo.
     - 'Eso no entraba en el examen.
 
 '
+    - 'Estamos en Unity, no en Unreal.
+
+'
+    - "\xBFRecuerdas los \xE1rboles de comportamiento? Pues eso no estaba.\n"
   - tipo: 1
     posiblesLineas:
     - El examen ha comenzado, adelante.
     - Venga, el tiempo esta corriendo.
+    - 'Recuerda abrir Unity.
+
+'
   - tipo: 5
     posiblesLineas:
     - "\xBFNo te sabes las normas o qu\xE9?"
@@ -191,7 +208,7 @@ MonoBehaviour:
     - 'Espero que no haya errores.
 
 '
-  - tipo: 7
+  - tipo: 9
     posiblesLineas:
     - Buen programita el que te has montando.
     - 'Probablemente te ponga buena nota
