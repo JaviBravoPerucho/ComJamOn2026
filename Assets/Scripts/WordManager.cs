@@ -26,8 +26,36 @@ public class WordManager : MonoBehaviour
 
     private HashSet<string> palabrasUsadas = new HashSet<string>();
 
+    public struct sesgoCorreccion
+    {
+        public int numPalabrasConseguidas;
+        public float factorTiempoRestante;
+        public int longitudTotalPalabras;
+        public float nivelDificultad;
+    }
+
+    private sesgoCorreccion correccion;
+
     void Start()
     {
+    }
+
+    public int calcularNota()
+    {
+        correccion = new sesgoCorreccion();
+        correccion.numPalabrasConseguidas = 0;
+        correccion.factorTiempoRestante = cronoController.GetTimePorcentage();
+        correccion.longitudTotalPalabras = 0;
+        correccion.nivelDificultad = GameManager.Instance.Level;
+
+        foreach(string palabra in palabrasUsadas)
+        {
+            correccion.numPalabrasConseguidas++;
+            correccion.longitudTotalPalabras+=palabra.Length;
+        }
+        int longitudPrograma = GetComponent<TextManager>().longitudPrograma;
+        int nota = 0;//Pendiente el calculo de nota
+        return nota;
     }
 
     void GenerarNuevaRonda(bool primeraVez = false)

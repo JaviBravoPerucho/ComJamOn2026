@@ -107,6 +107,7 @@ public class TextManager : MonoBehaviour
     private int programaActualIndex = 0;
     private int lineaActualIndex = 0;
     private bool finished = false;
+    public int longitudPrograma;
 
     private void Start()
     {
@@ -131,6 +132,7 @@ public class TextManager : MonoBehaviour
 
         campoEntrada.onValueChanged.AddListener(ActualizarContador);
         programaActualIndex = Random.Range(0, misProgramas.Length);
+        longitudPrograma = misProgramas[programaActualIndex].secuenciaLineas.Length;
         ActualizarUIWordManager();
     }
 
