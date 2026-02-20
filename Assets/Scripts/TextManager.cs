@@ -111,6 +111,7 @@ public class TextManager : MonoBehaviour
 
     private void Start()
     {
+        
         wordManager = GetComponent<WordManager>();
 
         GameManager.Instance.JuegoIniciado = true;
@@ -147,8 +148,8 @@ public class TextManager : MonoBehaviour
             else
             {
                 campoEntrada.text = "";
-                campoEntrada.ActivateInputField();
             }
+            campoEntrada.ActivateInputField();
         }
     }
 
