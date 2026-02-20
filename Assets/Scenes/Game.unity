@@ -1718,9 +1718,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2146750273}
+      - m_Target: {fileID: 5914200897358089359, guid: 40f275c638118454f8c547e3bb689475, type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadMenu
+        m_MethodName: LoadLevelSelector
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2109,7 +2109,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Empezar intento
+  m_text: 'Empezar examen
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
   m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
@@ -3244,10 +3246,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Escribir las palabras dentro del recuadro blanco.\n\n- La longitud se
-    debe adaptar a la requerida.\n\n- Las palabras deben empezar por la s\xEDlaba
+  m_text: "- Escribe palabras en espa\xF1ol dentro del recuadro blanco.\n\n- La longitud
+    se debe adaptar a la requerida.\n\n- Las palabras deben empezar por la s\xEDlaba
     correcta y se escriben completas.\n\n- Nada de nombres propios.\n\n\xA1Buena
-    suerte!"
+    suerte! - - - - >"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
   m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
@@ -5101,17 +5103,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109783951}
   m_CullTransparentMesh: 1
---- !u!114 &2146750273 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5914200897358089359, guid: 40f275c638118454f8c547e3bb689475, type: 3}
-  m_PrefabInstance: {fileID: 657459065}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25da6713da621d4cb16c2b0ed201b33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4111902376432848963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5126,7 +5117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 920429160687235946, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: pulseSpeed
-      value: 3
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 920429160687235946, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: startPulsePercentage

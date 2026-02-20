@@ -73,6 +73,7 @@ public class CronoController : MonoBehaviour
 
     public float GetTimePorcentage()
     {
-        return (maxTime-actualTime)/ maxTime;
+        // Ahora empieza en 0 y termina en 1.
+        return actualTime / maxTime;
     }
 }

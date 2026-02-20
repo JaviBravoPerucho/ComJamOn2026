@@ -663,7 +663,7 @@ MonoBehaviour:
     - Hemos terminado por hoy.
   - tipo: 9
     posiblesLineas:
-    - "Me voy a encargar de revisar to c\xF3digo a fondo."
+    - "Me voy a encargar de revisar tu c\xF3digo a fondo."
     - "\xBFQue has puesto ah\xED?, lo de respetar la arquitectura no va mucho contigo."
   - tipo: 12
     posiblesLineas:
