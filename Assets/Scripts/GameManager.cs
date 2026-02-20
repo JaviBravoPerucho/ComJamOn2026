@@ -65,7 +65,16 @@ public class GameManager : MonoBehaviour
         JuegoAcabado = false;
         Level = level;
         ResetPoints(); // Opcional: reiniciar puntos al empezar partida
-        SceneManager.LoadScene("Game");
+
+        if(level == 1)
+        {
+            SceneManager.LoadScene("Game");
+        }
+        else if(level == 2)
+        {
+            SceneManager.LoadScene("GameToni");
+        }
+        
     }
 
     public void LoadConfigMenu()

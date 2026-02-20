@@ -38,7 +38,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Global Volume Profile
+  m_Name: Global Volume Profile Toni
   m_EditorClassIdentifier: 
   components:
   - {fileID: -2202626780003512585}
@@ -101,10 +101,10 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8819375, z: 0.7855468, w: 0}
+    m_Value: {x: 0.598072, y: 0.7069983, z: 1, w: 0}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.97418404, z: 0.8778533, w: 0}
+    m_Value: {x: 0.7950533, y: 1, z: 0.8412749, w: 0}
   highlights:
     m_OverrideState: 0
     m_Value: {x: 0.9090404, y: 1, z: 0.9787212, w: 0}
