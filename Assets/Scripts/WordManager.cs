@@ -90,7 +90,7 @@ public class WordManager : MonoBehaviour
         MinLength = Random.Range(minRangeMin, minRangeMax);
         MaxLength = Random.Range(MinLength + minExtraRange, MinLength + maxExtraRange);
 
-        Debug.Log($"Nueva ronda - Sílaba: {SilabaActual} | Min: {MinLength} | Max: {MaxLength}");
+        //Debug.Log($"Nueva ronda - Sílaba: {SilabaActual} | Min: {MinLength} | Max: {MaxLength}");
     }
 
 

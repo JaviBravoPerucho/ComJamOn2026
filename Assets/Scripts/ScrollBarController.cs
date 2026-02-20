@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class ScrollBarController : MonoBehaviour
@@ -8,10 +9,12 @@ public class ScrollBarController : MonoBehaviour
     [SerializeField] private RectTransform rectTexto;
     [SerializeField] private RectTransform rectLine;
 
-    [SerializeField] private float distanciaRecorrido = 500f;
+    [SerializeField] public float distanciaRecorrido = 500f;
 
     private Vector2 posicionInicial;
     private Vector2 posicionInicialtexto;
+
+    public float lastValue = 0;
 
     private void Start()
     {
@@ -34,9 +37,12 @@ public class ScrollBarController : MonoBehaviour
         OnScrollChanged(scrollbar.value);
     }
 
-    private void OnScrollChanged(float value)
+    public void OnScrollChanged(float value)
     {
         if (!rectTexto && !rectLine) return;
+
+        lastValue = value;
+        scrollbar.value = value;
 
         float offset = value * distanciaRecorrido;
 

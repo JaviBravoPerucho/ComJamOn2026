@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
 
 // 1. Enumeración con todos los tipos de líneas que puedes tener en C++
 public enum TipoInstruccionCpp
@@ -44,6 +45,11 @@ public class TextManager : MonoBehaviour
 
     [SerializeField]
     private Dialogue dialogue;
+
+    [SerializeField]
+    private GameObject scrollbar;
+
+    private ScrollBarController scrollbarcontroller;
 
     // 2. Definición visual (Palabras y colores)
     [System.Serializable]
@@ -135,6 +141,11 @@ public class TextManager : MonoBehaviour
         char c = consonantes[Random.Range(0, consonantes.Length)];
         char v = vocales[Random.Range(0, vocales.Length)];
         wordManager.SilabaActual = (c.ToString() + v.ToString()).ToLower();
+
+        if (scrollbar)
+        {
+            scrollbarcontroller = scrollbar.GetComponent<ScrollBarController>();
+        }
         
 
         // Generar reglas de tamaño
@@ -196,7 +207,17 @@ public class TextManager : MonoBehaviour
             //contadorLineasTotales++;
             lineasAgregadas = nuevaLinea.Count(c => c == '\n');
             contadorLineasTotales += lineasAgregadas;
-            AplicarScroll();
+            //AplicarScroll();
+
+            if (scrollbarcontroller && contadorLineasTotales > lineasMaximasAntesDeSubir)
+            {
+                scrollbarcontroller.OnScrollChanged(contadorLineasTotales * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
+                Debug.Log("Nuevo valor scroll" + lineasAgregadas * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
+            }
+            else if(scrollbarcontroller)
+            {
+                scrollbarcontroller.OnScrollChanged(0);
+            }
         }
 
         AvanzarDeLinea(programaActual);

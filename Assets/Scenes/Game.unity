@@ -737,6 +737,7 @@ MonoBehaviour:
   cronoController: {fileID: 4111902376432848964}
   buttonCompile: {fileID: 1546159130}
   dialogue: {fileID: 47909503}
+  scrollbar: {fileID: 971936059}
   diccionarioSintaxis:
   - tipo: 0
     palabraClave: 'using '
@@ -772,7 +773,7 @@ MonoBehaviour:
   - nombreDelPrograma: Player Manager
     secuenciaLineas: 0000000003000000080000000900000004000000050000000700000008000000
   longitudPrograma: 0
-  lineasMaximasAntesDeSubir: 8
+  lineasMaximasAntesDeSubir: 3
   alturaDeLinea: 30
 --- !u!4 &334344274
 Transform:
@@ -2797,7 +2798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTexto: {fileID: 508636799}
   rectLine: {fileID: 1636306043}
-  distanciaRecorrido: 500
+  distanciaRecorrido: 1000
+  lastValue: 0
 --- !u!1 &1125222282
 GameObject:
   m_ObjectHideFlags: 0
