@@ -3619,46 +3619,56 @@ MonoBehaviour:
   scrollbar: {fileID: 971936059}
   diccionarioSintaxis:
   - tipo: 0
-    palabraClave: 'import '
-    colorPalabraClave: {r: 0.8773585, g: 0.57225215, b: 0.012415428, a: 1}
-    colorInput: {r: 1, g: 1, b: 1, a: 1}
+    palabraClave: '#include '
+    colorPalabraClave: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    colorInput: {r: 0.75294125, g: 0.5294118, b: 0.25882354, a: 1}
   - tipo: 3
-    palabraClave: 'package '
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
-    colorInput: {r: 1, g: 1, b: 1, a: 1}
+    palabraClave: '\nenum '
+    colorPalabraClave: {r: 0.27450982, g: 0.52156866, b: 0.7176471, a: 1}
+    colorInput: {r: 0.33333334, g: 0.7176471, b: 0.41960788, a: 1}
   - tipo: 9
-    palabraClave: '\npublic class '
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
-    colorInput: {r: 1, g: 1, b: 1, a: 1}
+    palabraClave: '\nclass '
+    colorPalabraClave: {r: 0.27394092, g: 0.5218516, b: 0.7169812, a: 1}
+    colorInput: {r: 0.33481666, g: 0.7169812, b: 0.42086333, a: 1}
   - tipo: 8
-    palabraClave: this.
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
-    colorInput: {r: 0.6900357, g: 0, b: 0.8018868, a: 1}
+    palabraClave: '      '
+    colorPalabraClave: {r: 1, g: 1, b: 1, a: 0}
+    colorInput: {r: 0.70851773, g: 0.9056604, b: 0.5339979, a: 1}
   - tipo: 6
-    palabraClave: '\npublic '
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
-    colorInput: {r: 0.23820755, g: 0.5977635, b: 0.9528302, a: 1}
+    palabraClave: '\nvoid  '
+    colorPalabraClave: {r: 0.27450982, g: 0.52156866, b: 0.7176471, a: 1}
+    colorInput: {r: 0.8773585, g: 0.8352526, b: 0.5504183, a: 1}
   - tipo: 12
     palabraClave: 'int '
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    colorPalabraClave: {r: 0.27450982, g: 0.52156866, b: 0.7176471, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 10
     palabraClave: '\nif '
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    colorPalabraClave: {r: 0.6901961, g: 0.36862746, b: 0.58431375, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 11
     palabraClave: '\nfor '
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    colorPalabraClave: {r: 0.6901961, g: 0.36862746, b: 0.58431375, a: 1}
+    colorInput: {r: 0.31461376, g: 0.6603774, b: 0.38124445, a: 1}
+  - tipo: 14
+    palabraClave: 'return '
+    colorPalabraClave: {r: 0.6886792, g: 0.36707902, b: 0.5833748, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 16
     palabraClave: //
-    colorPalabraClave: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
-    colorInput: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 1}
+    colorPalabraClave: {r: 0, g: 0.67058825, b: 0.027450982, a: 1}
+    colorInput: {r: 0, g: 0.6698113, b: 0.025961692, a: 1}
+  - tipo: 13
+    palabraClave: 'std::cout << '
+    colorPalabraClave: {r: 0.7161356, g: 0.7264151, b: 0.7165341, a: 1}
+    colorInput: {r: 0.7264151, g: 0.48418894, b: 0.18845676, a: 1}
+  - tipo: 1
+    palabraClave: '\n#define '
+    colorPalabraClave: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+    colorInput: {r: 0.5404356, g: 0.40258992, b: 0.7830189, a: 1}
   misProgramas:
-  - nombreDelPrograma: AndroidGame
-    secuenciaLineas: 030000000000000000000000000000000000000009000000060000000c0000000a000000080000000600000010000000100000000b000000080000000a0000000c0000000c000000
-  - nombreDelPrograma: AndroidFileManager
-    secuenciaLineas: 03000000000000000000000009000000100000000600000008000000100000000a00000008000000060000000b000000080000000a00000008000000100000000c0000000c000000
+  - nombreDelPrograma: Practica1
+    secuenciaLineas: 0000000000000000000000000100000009000000030000000800000008000000080000000600000006000000060000000a0000000c0000000e000000060000000b000000100000000a0000000c0000000e000000060000000c0000000c000000
   longitudPrograma: 0
   lineasMaximasAntesDeSubir: 12
   alturaDeLinea: 30
