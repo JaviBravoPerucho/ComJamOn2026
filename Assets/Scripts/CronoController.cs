@@ -10,6 +10,9 @@ public class CronoController : MonoBehaviour
     public bool fill = true;
     public WordManager wordManager;
 
+    [SerializeField]
+    private GameObject buttonCompile;
+
     private float actualTime = 0.0f;
     private Image crono_image;
 
@@ -33,7 +36,10 @@ public class CronoController : MonoBehaviour
             StopCrono();
             GameManager.Instance.JuegoIniciado = false;
             GameManager.Instance.Puntuacion = wordManager.calcularNota();
-            GameManager.Instance.GameOver();
+            
+            if(buttonCompile)
+                buttonCompile.SetActive(true);
+            //GameManager.Instance.GameOver();
         }
 
         if (fill)

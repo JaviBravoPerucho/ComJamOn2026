@@ -11,8 +11,8 @@ public class FakeCompilerConsole : MonoBehaviour
     [SerializeField] private Dialogue dialogue;
 
     private Queue<string> lines = new Queue<string>();
-    List<string> wordList;
-    private float nota = 5.0f;
+    List<string> wordList = new List<string>();
+    private float nota = 0.0f;
 
     public void StartCompilation()
     {
@@ -30,7 +30,7 @@ public class FakeCompilerConsole : MonoBehaviour
     {
         float startTime = Time.time;
 
-        while (Time.time - startTime < compileDuration)
+        while (Time.time - startTime < compileDuration && wordList.Count > 0)
         {
             string nuevaLinea = GenerarLinea(wordList);
 
@@ -43,6 +43,13 @@ public class FakeCompilerConsole : MonoBehaviour
 
             yield return new WaitForSeconds(lineInterval);
         }
+
+        if(wordList.Count == 0)
+        {
+            lines.Enqueue($"<color=#FF4444>Error: '{wordList.Count}' lineas de código </color>");
+            consoleText.text = string.Join("\n", lines);
+        }
+        
 
         if (dialogue)
         {
