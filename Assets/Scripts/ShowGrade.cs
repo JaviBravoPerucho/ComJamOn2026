@@ -8,6 +8,9 @@ public class ShowGrade : MonoBehaviour
     [SerializeField]
     private GameObject notaPanel;
 
+    [SerializeField]
+    private Dialogue dialogue;  
+
     private void FixedUpdate()
     {
         
@@ -17,6 +20,24 @@ public class ShowGrade : MonoBehaviour
             if (elapsedTime > timeToShow) { 
                 elapsedTime = 0;
                 if(notaPanel)notaPanel.SetActive(true);
+                if (dialogue)
+                {
+                    float nota = GameManager.Instance.Puntuacion;
+                    Debug.Log("TO NOTA:" + nota);
+                    if(nota < 5.0)
+                    {
+                        dialogue.LanzarDialogo(TipoDialogo.NotaMala);
+                    }
+                    else if(nota < 8)
+                    {
+                        dialogue.LanzarDialogo(TipoDialogo.NotaMedia);
+                    }
+                    else
+                    {
+                        dialogue.LanzarDialogo(TipoDialogo.BuenaNota);
+                    }
+                    
+                }
                 Destroy(gameObject);
             }
         }

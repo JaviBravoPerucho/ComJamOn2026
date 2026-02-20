@@ -214,6 +214,21 @@ MonoBehaviour:
     - 'Probablemente te ponga buena nota.
 
 '
+  - tipo: 12
+    posiblesLineas:
+    - Siento decirte que no has aprobado.
+    - "La pr\xF3xima vez ser\xE1."
+  - tipo: 11
+    posiblesLineas:
+    - No esta nada mal, un aprobado es un aprobado.
+    - 'Has a probado la asignatura, enhorabuena.
+
+'
+  - tipo: 10
+    posiblesLineas:
+    - Te voy a tener que contratar en Narratech, increible trabajo.
+    - "Un poco m\xE1s y podr\xEDas tener un doctorado amigo mio.\n"
+    - "Tu manajo de Unity es sencillamente inmaculado. \xA1Enhorabuena!"
   dialoguePanel: {fileID: 1125222282}
   dialogueText: {fileID: 930253147}
   timeToLetter: 0.05
@@ -842,6 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToShow: 3
   notaPanel: {fileID: 2044121858}
+  dialogue: {fileID: 47909503}
 --- !u!1 &414885530
 GameObject:
   m_ObjectHideFlags: 0
