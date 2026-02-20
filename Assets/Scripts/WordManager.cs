@@ -157,27 +157,42 @@ public class WordManager : MonoBehaviour
     string GenerarNuevaSilaba(string palabra)
     {
         int len = palabra.Length;
+        if (len == 0) return "";
 
         char ultima = palabra[len - 1];
 
-        // Regla 1  última letra consonante
+        // Regla 1: última letra es consonante
         if (!EsVocal(ultima))
         {
             return ultima.ToString();
         }
 
-        // Si la última es vocal
+        // Si la última es vocal, revisamos la anterior
         if (len >= 2)
         {
             char anterior = palabra[len - 2];
 
-            // Regla 2  vocal + vocal
+            // Regla 2: vocal + vocal
             if (EsVocal(anterior))
             {
                 return ultima.ToString();
             }
 
-            // Regla 3  consonante + vocal
+            // --- EXCEPCIONES DE CONSONANTES ---
+
+            // Excepción de la 'x' 
+            if (anterior == 'x' ||anterior == 'y')
+            {
+                return ultima.ToString();
+            }
+
+            // Excepción de la 'z' con 'e' e 'i'
+            if ((anterior == 'z') && (ultima == 'e' || ultima == 'i'))
+            {
+                return ultima.ToString();
+            }
+
+            // Regla 3 Estándar: consonante + vocal
             return anterior.ToString() + ultima.ToString();
         }
 
