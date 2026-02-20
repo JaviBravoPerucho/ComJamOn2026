@@ -74,6 +74,10 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameToni");
         }
+        else if(level == 3)
+        {
+            SceneManager.LoadScene("GamePedro");
+        }
         
     }
 
