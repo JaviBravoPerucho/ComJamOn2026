@@ -25,5 +25,6 @@ public class ShowGrade : MonoBehaviour
     private void Start()
     {
         elapsedTime = 0;
+        GameManager.Instance.JuegoAcabado = false;
     }
 }
