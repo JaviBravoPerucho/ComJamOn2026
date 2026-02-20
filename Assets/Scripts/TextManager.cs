@@ -14,10 +14,13 @@ public enum TipoInstruccionCpp
     Update,
     Valor,
     ClaseDef,
+    If,
+    For,
     VariableInt,
     PrintConsola,
     ReturnCero,
-    CierreBloque
+    CierreBloque,
+    Comentario
 }
 
 public class TextManager : MonoBehaviour

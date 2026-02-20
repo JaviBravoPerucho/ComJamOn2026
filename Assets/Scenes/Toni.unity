@@ -726,38 +726,46 @@ MonoBehaviour:
   dialogue: {fileID: 47909503}
   diccionarioSintaxis:
   - tipo: 0
-    palabraClave: 'using '
-    colorPalabraClave: {r: 0.15419187, g: 0.5426649, b: 0.9339623, a: 1}
+    palabraClave: 'import '
+    colorPalabraClave: {r: 0.8773585, g: 0.57225215, b: 0.012415428, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 3
-    palabraClave: '\npublic enum '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 0.61424375, g: 1, b: 0.2028302, a: 1}
-  - tipo: 4
-    palabraClave: '\nvoid Awake() '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 1, g: 1, b: 1, a: 1}
-  - tipo: 8
-    palabraClave: 
-    colorPalabraClave: {r: 1, g: 1, b: 1, a: 1}
+    palabraClave: 'package '
+    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 9
     palabraClave: '\npublic class '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 0.30994633, g: 0.754717, b: 0.3025988, a: 1}
-  - tipo: 7
-    palabraClave: '\nvoid Update() '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
+    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
-  - tipo: 5
-    palabraClave: '\nvoid Start() '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
+  - tipo: 8
+    palabraClave: this.
+    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    colorInput: {r: 0.6900357, g: 0, b: 0.8018868, a: 1}
+  - tipo: 6
+    palabraClave: '\npublic '
+    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    colorInput: {r: 0.23820755, g: 0.5977635, b: 0.9528302, a: 1}
+  - tipo: 12
+    palabraClave: 'int '
+    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
+  - tipo: 10
+    palabraClave: '\nif '
+    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    colorInput: {r: 1, g: 1, b: 1, a: 1}
+  - tipo: 11
+    palabraClave: '\nfor '
+    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    colorInput: {r: 1, g: 1, b: 1, a: 1}
+  - tipo: 16
+    palabraClave: //
+    colorPalabraClave: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+    colorInput: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 1}
   misProgramas:
-  - nombreDelPrograma: Arbol de comportamiento
-    secuenciaLineas: 00000000000000000300000008000000080000000900000004000000
-  - nombreDelPrograma: Player Manager
-    secuenciaLineas: 0000000003000000080000000900000004000000050000000700000008000000
+  - nombreDelPrograma: AndroidGame
+    secuenciaLineas: 030000000000000000000000000000000000000009000000060000000c0000000a000000080000000600000010000000100000000b000000080000000a0000000c0000000c000000
+  - nombreDelPrograma: AndroidFileManager
+    secuenciaLineas: 03000000000000000000000009000000100000000600000008000000100000000a00000008000000060000000b000000080000000a00000008000000100000000c0000000c000000
 --- !u!4 &334344274
 Transform:
   m_ObjectHideFlags: 0
