@@ -46,6 +46,7 @@ public class FakeCompilerConsole : MonoBehaviour
 
         if (dialogue)
         {
+            Debug.Log("Corrige");
             dialogue.LanzarDialogo(TipoDialogo.Corrigiendo);
         }
 

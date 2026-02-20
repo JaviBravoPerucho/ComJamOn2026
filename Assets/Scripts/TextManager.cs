@@ -185,11 +185,7 @@ public class TextManager : MonoBehaviour
             if (buttonCompile)
             {
                 buttonCompile.SetActive(true);
-            }
-            if (GetComponent<FakeCompilerConsole>())
-            {
-                GetComponent<FakeCompilerConsole>().StartCompilation();
-            }
+            }          
             if (dialogue)
             {
                 dialogue.LanzarDialogo(TipoDialogo.SeAcaboExamen);
