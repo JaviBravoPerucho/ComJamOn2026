@@ -35,6 +35,7 @@ public class WordManager : MonoBehaviour
     {
         if (primeraVez)
         {
+            GameManager.Instance.JuegoIniciado = true;
             // Generar sílaba inicial aleatoria (consonante + vocal)
             string consonantes = "bcdfglmnprstv";
             char c = consonantes[Random.Range(0, consonantes.Length)];
@@ -53,6 +54,13 @@ public class WordManager : MonoBehaviour
 
     public bool TryWord(string palabra)
     {
+
+        if (!GameManager.Instance.JuegoIniciado)
+        {
+            shake2D.Shake(0.2f, 0.1f);
+            return false;
+        }
+
         palabra = LoadWords.Instance.QuitarTildes(palabra).ToLower();
 
         //  Chequear longitud
@@ -112,6 +120,11 @@ public class WordManager : MonoBehaviour
         if (dialogue)
         {
             dialogue.LanzarDialogo(TipoDialogo.Bien);
+        }
+
+        if (GetComponent<FakeCompilerConsole>())
+        {
+            GetComponent<FakeCompilerConsole>().SetWords(palabrasUsadas, GameManager.Instance.Puntuacion);
         }
 
         //  Generar siguiente sílaba

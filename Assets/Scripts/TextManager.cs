@@ -32,6 +32,12 @@ public class TextManager : MonoBehaviour
 
     private WordManager wordManager;
 
+    [SerializeField]
+    private CronoController cronoController;
+
+    [SerializeField]
+    private GameObject buttonCompile;
+
     // 2. Definición visual (Palabras y colores)
     [System.Serializable]
     public class DefinicionSintaxis
@@ -94,6 +100,7 @@ public class TextManager : MonoBehaviour
     // Control de progreso
     private int programaActualIndex = 0;
     private int lineaActualIndex = 0;
+    private bool finished = false;
 
     private void Start()
     {
@@ -128,7 +135,7 @@ public class TextManager : MonoBehaviour
     public void EnviarTexto()
     {
         // Si ya terminamos todos los programas, no hacemos nada
-        if (programaActualIndex >= misProgramas.Length) return;
+        if (programaActualIndex >= misProgramas.Length || finished) return;
 
         NivelPrograma programaActual = misProgramas[programaActualIndex];
 
@@ -164,6 +171,20 @@ public class TextManager : MonoBehaviour
         {
             textoDestino.text += "\n<color=#00FF00>--- FIN DEL PROGRAMA: " + programaActual.nombreDelPrograma.ToUpper() + " ---</color>\n\n";
             lineaActualIndex = 0;
+            finished = true;
+            if (cronoController)
+            {
+                cronoController.StopCrono();
+            }
+            if (buttonCompile)
+            {
+                buttonCompile.SetActive(true);
+            }
+            if (GetComponent<FakeCompilerConsole>())
+            {
+                GetComponent<FakeCompilerConsole>().StartCompilation();
+            }
+            GameManager.Instance.JuegoIniciado = false;
             //programaActualIndex++;
         }
     }

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Transform manilla;
     public float gameTime = 60.0f;
     private float elapsedTime = 0;
+    public bool JuegoIniciado;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        JuegoIniciado = false;
         // Asignamos la instancia
         Instance = this;
 
