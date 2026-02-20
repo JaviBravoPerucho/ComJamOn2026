@@ -11,6 +11,8 @@ public class WordManager : MonoBehaviour
     public int MaxLength { get; private set; }
 
     [SerializeField]
+    private CameraShake2D shake2D;
+    [SerializeField]
     private Dialogue dialogue;
 
     public int minRangeMin = 4;
@@ -54,6 +56,7 @@ public class WordManager : MonoBehaviour
         //  Chequear longitud
         if (palabra.Length < MinLength || palabra.Length > MaxLength)
         {
+            shake2D.Shake(0.2f, 0.1f);
             Debug.Log("Longitud incorrecta");
             if (dialogue)
             {
@@ -65,6 +68,7 @@ public class WordManager : MonoBehaviour
         // 2️⃣ Chequear sílaba inicial
         if (!palabra.StartsWith(SilabaActual))
         {
+            shake2D.Shake(0.2f, 0.1f);
             Debug.Log("No empieza por la sílaba correcta");
             if (dialogue)
             {
@@ -76,6 +80,7 @@ public class WordManager : MonoBehaviour
         //  Chequear diccionario
         if (!LoadWords.Instance.Existe(palabra))
         {
+            shake2D.Shake(0.2f, 0.1f);
             Debug.Log("La palabra no existe");
             if (dialogue)
             {
@@ -86,6 +91,7 @@ public class WordManager : MonoBehaviour
 
         if (palabrasUsadas.Contains(palabra))
         {
+            shake2D.Shake(0.2f, 0.1f);
             Debug.Log("Palabra ya usada");
             if (dialogue)
             {
