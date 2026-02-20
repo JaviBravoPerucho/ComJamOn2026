@@ -735,7 +735,7 @@ MonoBehaviour:
   lineIndex: {fileID: 1636306041}
   cronoController: {fileID: 4111902376432848964}
   buttonCompile: {fileID: 1546159130}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 47909503}
   diccionarioSintaxis:
   - tipo: 0
     palabraClave: 'using '
@@ -770,6 +770,7 @@ MonoBehaviour:
     secuenciaLineas: 00000000000000000300000008000000080000000900000004000000
   - nombreDelPrograma: Player Manager
     secuenciaLineas: 0000000003000000080000000900000004000000050000000700000008000000
+  longitudPrograma: 0
 --- !u!4 &334344274
 Transform:
   m_ObjectHideFlags: 0
@@ -797,6 +798,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13bc21c3e4d312c448632621e55bf3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SilabaActual: 
+  MinLength: 0
+  MaxLength: 0
   shake2D: {fileID: 186541404}
   dialogue: {fileID: 47909503}
   cronoController: {fileID: 4111902376432848964}
@@ -819,7 +823,7 @@ MonoBehaviour:
   consoleText: {fileID: 1721588642}
   lineInterval: 0.08
   compileDuration: 5
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 47909503}
 --- !u!1 &472015695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,7 +4046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2044121859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4259,7 +4263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2090520783
 RectTransform:
   m_ObjectHideFlags: 0
