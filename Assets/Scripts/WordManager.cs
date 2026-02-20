@@ -14,6 +14,8 @@ public class WordManager : MonoBehaviour
     private CameraShake2D shake2D;
     [SerializeField]
     private Dialogue dialogue;
+    [SerializeField]
+    private CronoController cronoController;
 
     public int minRangeMin = 4;
     public int minRangeMax = 6;
@@ -101,6 +103,11 @@ public class WordManager : MonoBehaviour
         }
 
         palabrasUsadas.Add(palabra);
+
+        if (cronoController)
+        {
+            cronoController.addTime();
+        }
 
         if (dialogue)
         {

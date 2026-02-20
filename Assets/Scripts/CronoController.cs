@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class CronoController : MonoBehaviour
 {
     public float maxTime = 60.0f;
+    public float extraTime = 2f;
     public bool isRunning = true;
     // Si es true, el cronómetro se llenará a medida que avanza el tiempo. Si es false, se vaciará.
     public bool fill = true;
@@ -55,6 +56,11 @@ public class CronoController : MonoBehaviour
     public bool IsRunning()
     {
         return isRunning;
+    }
+
+    public void addTime()
+    {
+        actualTime -= extraTime;
     }
     public bool IsTimeUp()
     {

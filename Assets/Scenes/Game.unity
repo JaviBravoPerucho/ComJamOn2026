@@ -312,7 +312,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.8483, y: -409.99786}
-  m_SizeDelta: {x: 684.7116, y: 52.1808}
+  m_SizeDelta: {x: 300, y: 52.1808}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186541401
 MonoBehaviour:
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -493792733, guid: fd6cb592190e4d0478872c048c13d0cc, type: 3}
+  m_Sprite: {fileID: 1339203191, guid: fd6cb592190e4d0478872c048c13d0cc, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -624,11 +624,11 @@ MonoBehaviour:
   - tipo: 7
     palabraClave: '\nvoid Update() '
     colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 1, g: 1, b: 1, a: 0}
+    colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 5
     palabraClave: '\nvoid Start() '
     colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 1, g: 1, b: 1, a: 0}
+    colorInput: {r: 1, g: 1, b: 1, a: 1}
   misProgramas:
   - nombreDelPrograma: Arbol de comportamiento
     secuenciaLineas: 00000000000000000300000008000000080000000900000004000000
@@ -663,6 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shake2D: {fileID: 186541404}
   dialogue: {fileID: 47909503}
+  cronoController: {fileID: 0}
   minRangeMin: 3
   minRangeMax: 5
   minExtraRange: 3
@@ -1470,7 +1471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 698, y: -410}
+  m_AnchoredPosition: {x: 431, y: -410}
   m_SizeDelta: {x: 368.7979, y: 79.5901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854048845
@@ -3011,7 +3012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 452, y: -410}
+  m_AnchoredPosition: {x: 217.99998, y: -410}
   m_SizeDelta: {x: 79.943, y: 79.5901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2094339793
@@ -3147,7 +3148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -481, y: -410}
+  m_AnchoredPosition: {x: -249, y: -410}
   m_SizeDelta: {x: 79.943, y: 79.5901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109783953
