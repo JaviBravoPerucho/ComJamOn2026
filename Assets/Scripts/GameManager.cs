@@ -8,12 +8,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     // Variables globales de ejemplo
-    public int Puntuacion;
+    public float Puntuacion;
 
     public int Level;
 
     public bool JuegoIniciado;
     public bool JuegoAcabado;
+
+    public WordManager wordManager;
 
     private void Awake()
     {
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Inicialización de variables o lógica de inicio
-        Level = 0; // 1-fede / 2-Tony / 3-Pedro
+        Level = 1; // 1-fede / 2-Tony / 3-Pedro
         Puntuacion = 0;
     }
 
@@ -72,11 +74,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Configuration");
     }
 
-    public void GameOver(bool endedProgram)
+    public void GameOver()
     {
-        if (!endedProgram) Puntuacion = 5;
-        else Puntuacion = 0;
-
         JuegoAcabado = true;
     }
 }

@@ -248,6 +248,7 @@ public class TextManager : MonoBehaviour
                 dialogue.LanzarDialogo(TipoDialogo.SeAcaboExamen);
             }
             GameManager.Instance.JuegoIniciado = false;
+            GameManager.Instance.Puntuacion = wordManager.calcularNota();
             //programaActualIndex++;
         }
     }

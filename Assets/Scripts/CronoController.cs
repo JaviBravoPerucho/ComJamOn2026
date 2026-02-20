@@ -8,6 +8,7 @@ public class CronoController : MonoBehaviour
     public bool isRunning = true;
     // Si es true, el cronómetro se llenará a medida que avanza el tiempo. Si es false, se vaciará.
     public bool fill = true;
+    public WordManager wordManager;
 
     private float actualTime = 0.0f;
     private Image crono_image;
@@ -29,8 +30,10 @@ public class CronoController : MonoBehaviour
 
         if (actualTime >= maxTime)
         {
-            actualTime = maxTime;
-            GameManager.Instance.GameOver(false);
+            StopCrono();
+            GameManager.Instance.JuegoIniciado = false;
+            GameManager.Instance.Puntuacion = wordManager.calcularNota();
+            GameManager.Instance.GameOver();
         }
 
         if (fill)
@@ -70,6 +73,6 @@ public class CronoController : MonoBehaviour
 
     public float GetTimePorcentage()
     {
-        return actualTime / maxTime;
+        return (maxTime-actualTime)/ maxTime;
     }
 }

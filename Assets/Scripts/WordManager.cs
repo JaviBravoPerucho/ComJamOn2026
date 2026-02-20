@@ -31,7 +31,7 @@ public class WordManager : MonoBehaviour
         public int numPalabrasConseguidas;
         public float factorTiempoRestante;
         public int longitudTotalPalabras;
-        public float nivelDificultad;
+        public int nivelDificultad;
     }
 
     private sesgoCorreccion correccion;
@@ -40,7 +40,7 @@ public class WordManager : MonoBehaviour
     {
     }
 
-    public int calcularNota()
+    public float calcularNota()
     {
         correccion = new sesgoCorreccion();
         correccion.numPalabrasConseguidas = 0;
@@ -53,8 +53,33 @@ public class WordManager : MonoBehaviour
             correccion.numPalabrasConseguidas++;
             correccion.longitudTotalPalabras+=palabra.Length;
         }
-        int longitudPrograma = GetComponent<TextManager>().longitudPrograma;
-        int nota = 0;//Pendiente el calculo de nota
+        int numPalabrasPrograma = GetComponent<TextManager>().longitudPrograma;
+
+        float factorNumPalabras = (float)correccion.numPalabrasConseguidas / (float)numPalabrasPrograma;
+        float longitudMedia = (float)correccion.longitudTotalPalabras / (float)correccion.numPalabrasConseguidas;
+        if (correccion.numPalabrasConseguidas == 0) longitudMedia = 0;
+        float factorLongitud = Mathf.Min(1,Mathf.Max(0, (longitudMedia - 4) / 4));
+
+        float factorDificultad = 1;
+
+        switch (correccion.nivelDificultad)
+        {
+            case 1:
+                factorDificultad = 1.2f;
+                break;
+            case 2:
+                factorDificultad = 1.0f;
+                break;
+            case 3:
+                factorDificultad = 0.7f;
+                break;
+        }
+
+        float factorTotal = 5 * factorNumPalabras + 3 * correccion.factorTiempoRestante + 2 * factorLongitud;
+
+        Debug.Log("FactorNumPalabras : " + 5*factorNumPalabras + "\nFactorTiempoRestante: " + 3*correccion.factorTiempoRestante + "\nFactorLongitud: " + 2*factorLongitud);
+
+        float nota = Mathf.Min(10,Mathf.Max(0,factorTotal*factorDificultad));
         return nota;
     }
 
@@ -142,7 +167,7 @@ public class WordManager : MonoBehaviour
 
         if (GetComponent<FakeCompilerConsole>())
         {
-            GetComponent<FakeCompilerConsole>().SetWords(palabrasUsadas, GameManager.Instance.Puntuacion);
+            GetComponent<FakeCompilerConsole>().SetWords(palabrasUsadas, calcularNota());
         }
 
         //  Generar siguiente sílaba

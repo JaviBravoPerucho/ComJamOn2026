@@ -4258,6 +4258,7 @@ GameObject:
   - component: {fileID: 2044121861}
   - component: {fileID: 2044121860}
   - component: {fileID: 2044121862}
+  - component: {fileID: 2044121863}
   m_Layer: 5
   m_Name: PanelNota
   m_TagString: Untagged
@@ -4348,6 +4349,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2044121863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044121858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d0a596cd2f35e42b526b836178c46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nota: {fileID: 1814024570}
 --- !u!1 &2055541081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4928,12 +4942,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014776318945773817, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: maxTime
-      value: 60
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5014776318945773817, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: isRunning
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5014776318945773817, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
+      propertyPath: wordManager
+      value: 
+      objectReference: {fileID: 334344275}
     - target: {fileID: 5236496268557057013, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: m_Color.a
       value: 1

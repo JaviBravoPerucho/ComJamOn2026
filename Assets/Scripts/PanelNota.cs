@@ -10,7 +10,7 @@ public class PanelNota : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        nota.text = GameManager.Instance.Puntuacion.ToString();
+        nota.text = GameManager.Instance.Puntuacion.ToString("0.#");
     }
 
     // Update is called once per frame

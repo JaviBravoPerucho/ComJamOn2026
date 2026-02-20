@@ -48,7 +48,7 @@ public class FakeCompilerConsole : MonoBehaviour
         {
             Debug.Log("Corrige");
             dialogue.LanzarDialogo(TipoDialogo.Corrigiendo);
-            GameManager.Instance.GameOver(true);
+            GameManager.Instance.GameOver();
         }
 
         // Al terminar simplemente salimos.
