@@ -768,9 +768,9 @@ MonoBehaviour:
     colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   misProgramas:
-  - nombreDelPrograma: Arbol de comportamiento
+  - nombreDelPrograma: Tu primer programa
     secuenciaLineas: 00000000000000000300000008000000080000000900000004000000
-  - nombreDelPrograma: Player Manager
+  - nombreDelPrograma: Arbol de comportamiento
     secuenciaLineas: 0000000003000000080000000900000004000000050000000700000008000000
   longitudPrograma: 0
   lineasMaximasAntesDeSubir: 12

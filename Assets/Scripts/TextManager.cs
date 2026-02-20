@@ -213,7 +213,7 @@ public class TextManager : MonoBehaviour
 
             if (scrollbarcontroller && contadorLineasTotales > lineasMaximasAntesDeSubir)
             {
-                scrollbarcontroller.OnScrollChanged(contadorLineasTotales * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
+                scrollbarcontroller.OnScrollChanged((contadorLineasTotales - lineasMaximasAntesDeSubir) * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
                 //Debug.Log("Nuevo valor scroll" + lineasAgregadas * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
             }
             else if(scrollbarcontroller)
