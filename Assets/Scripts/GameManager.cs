@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        elapsedTime += Time.deltaTime;
-        manilla.rotation = Quaternion.Euler(0, 0, -(elapsedTime / gameTime) * 360);
+        //elapsedTime += Time.deltaTime;
+        //manilla.rotation = Quaternion.Euler(0, 0, -(elapsedTime / gameTime) * 360);
     }
 
     private void ResetPoints()

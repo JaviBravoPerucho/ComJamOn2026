@@ -24,7 +24,7 @@ public class LoadWords : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        palabras = new HashSet<string>(700000);
+        palabras = new HashSet<string>(220000);
         CargarPalabras();
     }
 
