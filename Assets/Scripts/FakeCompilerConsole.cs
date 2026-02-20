@@ -12,7 +12,7 @@ public class FakeCompilerConsole : MonoBehaviour
 
     private Queue<string> lines = new Queue<string>();
     List<string> wordList;
-    private float nota;
+    private float nota = 5.0f;
 
     public void StartCompilation()
     {
@@ -48,6 +48,7 @@ public class FakeCompilerConsole : MonoBehaviour
         {
             Debug.Log("Corrige");
             dialogue.LanzarDialogo(TipoDialogo.Corrigiendo);
+            GameManager.Instance.GameOver(true);
         }
 
         // Al terminar simplemente salimos.

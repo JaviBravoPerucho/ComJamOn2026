@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 
     // Variables globales de ejemplo
     public int Puntuacion;
-    public TMP_Text Nota;
     public GameObject PanelNota;
 
     public int Level;
@@ -36,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         // Inicialización de variables o lógica de inicio
         Level = 0; // 1-fede / 2-Tony / 3-Pedro
-        Puntuacion = 10;
+        Puntuacion = 0;
     }
 
     private void Update()
@@ -71,9 +70,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Configuration");
     }
 
-    public void GameOver()
+    public void GameOver(bool endedProgram)
     {
-        Nota.text = Puntuacion.ToString();
+        if (endedProgram) Puntuacion = 5;
+        else Puntuacion = 0;
+
         PanelNota.SetActive(true);
     }
 }

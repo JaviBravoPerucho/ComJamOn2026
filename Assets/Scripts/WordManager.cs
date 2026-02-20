@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour
 {
-    public string SilabaActual { get; private set; }
-    public int MinLength { get; private set; }
-    public int MaxLength { get; private set; }
+    public string SilabaActual;
+    public int MinLength;
+    public int MaxLength;
 
     [SerializeField]
     private CameraShake2D shake2D;
@@ -26,22 +26,12 @@ public class WordManager : MonoBehaviour
 
     private HashSet<string> palabrasUsadas = new HashSet<string>();
 
-    void Awake()
+    void Start()
     {
-        GenerarNuevaRonda(true);
     }
 
     void GenerarNuevaRonda(bool primeraVez = false)
     {
-        if (primeraVez)
-        {
-            GameManager.Instance.JuegoIniciado = true;
-            // Generar sílaba inicial aleatoria (consonante + vocal)
-            string consonantes = "bcdfglmnprstv";
-            char c = consonantes[Random.Range(0, consonantes.Length)];
-            char v = vocales[Random.Range(0, vocales.Length)];
-            SilabaActual = (c.ToString() + v.ToString()).ToLower();
-        }
 
         // Generar reglas de tamaño
         MinLength = Random.Range(minRangeMin, minRangeMax);

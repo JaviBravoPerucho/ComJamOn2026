@@ -112,6 +112,23 @@ public class TextManager : MonoBehaviour
     {
         wordManager = GetComponent<WordManager>();
 
+        GameManager.Instance.JuegoIniciado = true;
+        // Generar sílaba inicial aleatoria (consonante + vocal)
+        string consonantes = "bcdfglmnprstv";
+        string vocales = "aeiou";
+
+        char c = consonantes[Random.Range(0, consonantes.Length)];
+        char v = vocales[Random.Range(0, vocales.Length)];
+        wordManager.SilabaActual = (c.ToString() + v.ToString()).ToLower();
+        
+
+        // Generar reglas de tamaño
+        wordManager.MinLength = Random.Range(wordManager.minRangeMin, wordManager.minRangeMax);
+        wordManager.MaxLength = Random.Range(wordManager.MinLength + wordManager.minExtraRange, wordManager.MinLength + wordManager.maxExtraRange);
+
+        Debug.Log($"Nueva ronda - Sílaba: {wordManager.SilabaActual} | Min: {wordManager.MinLength} | Max: {wordManager.MaxLength}");
+
+
         campoEntrada.onValueChanged.AddListener(ActualizarContador);
         programaActualIndex = Random.Range(0, misProgramas.Length);
         ActualizarUIWordManager();
