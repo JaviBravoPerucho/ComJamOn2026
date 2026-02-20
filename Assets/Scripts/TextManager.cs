@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 // 1. Enumeración con todos los tipos de líneas que puedes tener en C++
 public enum TipoInstruccionCpp
@@ -109,6 +110,15 @@ public class TextManager : MonoBehaviour
     private bool finished = false;
     public int longitudPrograma;
 
+    [Header("Configuración de Scroll")]
+    [SerializeField] private int lineasMaximasAntesDeSubir = 10;
+    [SerializeField] private float alturaDeLinea = 25f; // Ajusta según el tamaño de tu fuente
+
+    private RectTransform rectTexto;
+    private RectTransform rectIndex;
+    private int contadorLineasTotales = 0; // Para saber cuántas líneas reales llevamos
+    private int lineasAgregadas;
+
     private void Start()
     {
         
@@ -119,6 +129,9 @@ public class TextManager : MonoBehaviour
         string consonantes = "bcdfglmnprstv";
         string vocales = "aeiou";
 
+        rectTexto = textoDestino.GetComponent<RectTransform>();
+        rectIndex = lineIndex.GetComponent<RectTransform>();
+
         char c = consonantes[Random.Range(0, consonantes.Length)];
         char v = vocales[Random.Range(0, vocales.Length)];
         wordManager.SilabaActual = (c.ToString() + v.ToString()).ToLower();
@@ -128,7 +141,7 @@ public class TextManager : MonoBehaviour
         wordManager.MinLength = Random.Range(wordManager.minRangeMin, wordManager.minRangeMax);
         wordManager.MaxLength = Random.Range(wordManager.MinLength + wordManager.minExtraRange, wordManager.MinLength + wordManager.maxExtraRange);
 
-        Debug.Log($"Nueva ronda - Sílaba: {wordManager.SilabaActual} | Min: {wordManager.MinLength} | Max: {wordManager.MaxLength}");
+        //Debug.Log($"Nueva ronda - Sílaba: {wordManager.SilabaActual} | Min: {wordManager.MinLength} | Max: {wordManager.MaxLength}");
 
 
         campoEntrada.onValueChanged.AddListener(ActualizarContador);
@@ -178,6 +191,12 @@ public class TextManager : MonoBehaviour
 
             string nuevaLinea = $"<color=#{hexClave}>{sintaxis.palabraClave}</color><color=#{hexInput}>{campoEntrada.text}</color>\n";
             textoDestino.text += nuevaLinea;
+
+            // Incrementamos el contador global y comprobamos el scroll
+            //contadorLineasTotales++;
+            lineasAgregadas = nuevaLinea.Count(c => c == '\n');
+            contadorLineasTotales += lineasAgregadas;
+            AplicarScroll();
         }
 
         AvanzarDeLinea(programaActual);
@@ -188,10 +207,28 @@ public class TextManager : MonoBehaviour
         ActualizarUIWordManager();
     }
 
+    private void AplicarScroll()
+    {
+        // Si hemos superado el límite de líneas visibles
+        if (contadorLineasTotales > lineasMaximasAntesDeSubir)
+        {
+            // Calculamos la nueva posición sumando la altura de línea a la Y
+            // (En UI, subir significa aumentar el valor de Y si el pivot está arriba)
+            float nuevaY = rectTexto.anchoredPosition.y + alturaDeLinea;
+
+            rectTexto.anchoredPosition = new Vector2(rectTexto.anchoredPosition.x, nuevaY);
+            rectIndex.anchoredPosition = new Vector2(rectIndex.anchoredPosition.x, nuevaY);
+        }
+    }
+
     private void AvanzarDeLinea(NivelPrograma programaActual)
     {
         lineaActualIndex++;
-        lineIndex.text += lineaActualIndex.ToString()+"\n";
+        //lineIndex.text += lineaActualIndex.ToString()+"\n";
+        for (int i = 0; i < lineasAgregadas; i++)
+        {
+            lineIndex.text += (contadorLineasTotales - lineasAgregadas + i + 1).ToString() + "\n";
+        }
         // Si hemos llegado al final del programa actual
         if (lineaActualIndex >= programaActual.secuenciaLineas.Length)
         {
