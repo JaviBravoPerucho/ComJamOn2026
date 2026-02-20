@@ -203,16 +203,18 @@ public class TextManager : MonoBehaviour
             string nuevaLinea = $"<color=#{hexClave}>{sintaxis.palabraClave}</color><color=#{hexInput}>{campoEntrada.text}</color>\n";
             textoDestino.text += nuevaLinea;
 
+
+            string palabraClaveProcesada = sintaxis.palabraClave.Replace("\\n", "\n");
             // Incrementamos el contador global y comprobamos el scroll
             //contadorLineasTotales++;
-            lineasAgregadas = nuevaLinea.Count(c => c == '\n');
+            lineasAgregadas = palabraClaveProcesada.Count(c => c == '\n') + 1;
             contadorLineasTotales += lineasAgregadas;
             //AplicarScroll();
 
             if (scrollbarcontroller && contadorLineasTotales > lineasMaximasAntesDeSubir)
             {
                 scrollbarcontroller.OnScrollChanged(contadorLineasTotales * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
-                Debug.Log("Nuevo valor scroll" + lineasAgregadas * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
+                //Debug.Log("Nuevo valor scroll" + lineasAgregadas * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
             }
             else if(scrollbarcontroller)
             {
@@ -246,6 +248,7 @@ public class TextManager : MonoBehaviour
     {
         lineaActualIndex++;
         //lineIndex.text += lineaActualIndex.ToString()+"\n";
+        Debug.Log(lineasAgregadas);
         for (int i = 0; i < lineasAgregadas; i++)
         {
             lineIndex.text += (contadorLineasTotales - lineasAgregadas + i + 1).ToString() + "\n";

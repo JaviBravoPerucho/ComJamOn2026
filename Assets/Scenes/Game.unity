@@ -773,7 +773,7 @@ MonoBehaviour:
   - nombreDelPrograma: Player Manager
     secuenciaLineas: 0000000003000000080000000900000004000000050000000700000008000000
   longitudPrograma: 0
-  lineasMaximasAntesDeSubir: 7
+  lineasMaximasAntesDeSubir: 12
   alturaDeLinea: 30
 --- !u!4 &334344274
 Transform:
