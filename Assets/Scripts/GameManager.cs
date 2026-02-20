@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,12 +9,11 @@ public class GameManager : MonoBehaviour
 
     // Variables globales de ejemplo
     public int Puntuacion;
+    public TMP_Text Nota;
+    public GameObject PanelNota;
 
     public int Level;
 
-    public Transform manilla;
-    public float gameTime = 60.0f;
-    private float elapsedTime = 0;
     public bool JuegoIniciado;
 
     private void Awake()
@@ -36,12 +36,11 @@ public class GameManager : MonoBehaviour
     {
         // Inicialización de variables o lógica de inicio
         Level = 0; // 1-fede / 2-Tony / 3-Pedro
+        Puntuacion = 10;
     }
 
     private void Update()
     {
-        //elapsedTime += Time.deltaTime;
-        //manilla.rotation = Quaternion.Euler(0, 0, -(elapsedTime / gameTime) * 360);
     }
 
     private void ResetPoints()
@@ -70,5 +69,11 @@ public class GameManager : MonoBehaviour
     {
         ResetPoints(); // Opcional: reiniciar puntos al empezar partida
         SceneManager.LoadScene("Configuration");
+    }
+
+    public void GameOver()
+    {
+        Nota.text = Puntuacion.ToString();
+        PanelNota.SetActive(true);
     }
 }
