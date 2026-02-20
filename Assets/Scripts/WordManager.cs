@@ -10,6 +10,14 @@ public class WordManager : MonoBehaviour
     public int MinLength { get; private set; }
     public int MaxLength { get; private set; }
 
+    [SerializeField]
+    private Dialogue dialogue;
+
+    public int minRangeMin = 4;
+    public int minRangeMax = 6;
+    public int minExtraRange = 3;
+    public int maxExtraRange = 6;
+
     string vocales = "aeiou";
 
     private HashSet<string> palabrasUsadas = new HashSet<string>();
@@ -31,8 +39,8 @@ public class WordManager : MonoBehaviour
         }
 
         // Generar reglas de tamaño
-        MinLength = Random.Range(4, 7);
-        MaxLength = Random.Range(MinLength + 1, MinLength + 4);
+        MinLength = Random.Range(minRangeMin, minRangeMax);
+        MaxLength = Random.Range(MinLength + minExtraRange, MinLength + maxExtraRange);
 
         Debug.Log($"Nueva ronda - Sílaba: {SilabaActual} | Min: {MinLength} | Max: {MaxLength}");
     }
@@ -47,6 +55,10 @@ public class WordManager : MonoBehaviour
         if (palabra.Length < MinLength || palabra.Length > MaxLength)
         {
             Debug.Log("Longitud incorrecta");
+            if (dialogue)
+            {
+                dialogue.LanzarDialogo(TipoDialogo.PalabraFueraRango);
+            }
             return false;
         }
 
@@ -54,6 +66,10 @@ public class WordManager : MonoBehaviour
         if (!palabra.StartsWith(SilabaActual))
         {
             Debug.Log("No empieza por la sílaba correcta");
+            if (dialogue)
+            {
+                dialogue.LanzarDialogo(TipoDialogo.PalabraSilabaIncorrecta);
+            }
             return false;
         }
 
@@ -61,16 +77,29 @@ public class WordManager : MonoBehaviour
         if (!LoadWords.Instance.Existe(palabra))
         {
             Debug.Log("La palabra no existe");
+            if (dialogue)
+            {
+                dialogue.LanzarDialogo(TipoDialogo.PalabraMal);
+            }
             return false;
         }
 
         if (palabrasUsadas.Contains(palabra))
         {
             Debug.Log("Palabra ya usada");
+            if (dialogue)
+            {
+                dialogue.LanzarDialogo(TipoDialogo.PalabraRepetida);
+            }
             return false;
         }
 
         palabrasUsadas.Add(palabra);
+
+        if (dialogue)
+        {
+            dialogue.LanzarDialogo(TipoDialogo.Bien);
+        }
 
         //  Generar siguiente sílaba
         SilabaActual = GenerarNuevaSilaba(palabra);

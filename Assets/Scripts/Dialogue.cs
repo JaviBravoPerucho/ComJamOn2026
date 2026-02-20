@@ -6,6 +6,7 @@ using System.Collections;
 public enum TipoDialogo
 {
     Preparate,
+    Comenzar,
     Bien,
     PalabraRepetida,
     PalabraFueraRango,
@@ -46,6 +47,11 @@ public class Dialogue : MonoBehaviour
     {
         // Ejemplo de uso al inicio:
         LanzarDialogo(TipoDialogo.Preparate);
+    }
+
+    public void EmpezarExamen()
+    {
+        LanzarDialogo(TipoDialogo.Comenzar);
     }
 
     // 3. Método público para llamar al diálogo pasándole el enum
