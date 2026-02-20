@@ -1953,7 +1953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Empezar intento
+  m_text: Empezar examen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
   m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
@@ -3088,10 +3088,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Escribir las palabras dentro del recuadro blanco.\n\n- La longitud se
-    debe adaptar a la requerida.\n\n- Las palabras deben empezar por la s\xEDlaba
+  m_text: "- Escribe palabras en espa\xF1ol dentro del recuadro blanco.\n\n- La longitud
+    se debe adaptar a la requerida.\n\n- Las palabras deben empezar por la s\xEDlaba
     correcta y se escriben completas.\n\n- Nada de nombres propios.\n\n\xA1Buena
-    suerte!"
+    suerte! - - - - >"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
   m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
@@ -5114,7 +5114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 920429160687235946, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: pulseSpeed
-      value: 3
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 920429160687235946, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: startPulsePercentage
