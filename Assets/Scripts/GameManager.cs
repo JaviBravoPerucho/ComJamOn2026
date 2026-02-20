@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(bool endedProgram)
     {
-        if (endedProgram) Puntuacion = 5;
+        if (!endedProgram) Puntuacion = 5;
         else Puntuacion = 0;
 
         JuegoAcabado = true;
