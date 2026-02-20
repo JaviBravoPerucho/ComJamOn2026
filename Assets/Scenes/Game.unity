@@ -610,26 +610,30 @@ MonoBehaviour:
     colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
     colorInput: {r: 0.61424375, g: 1, b: 0.2028302, a: 1}
   - tipo: 4
-    palabraClave: '\nvoid Awake '
+    palabraClave: '\nvoid Awake() '
     colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 0.78338486, g: 0.8301887, b: 0.37201852, a: 1}
+    colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 8
     palabraClave: 
     colorPalabraClave: {r: 1, g: 1, b: 1, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
-  - tipo: 6
-    palabraClave: "\treturn "
-    colorPalabraClave: {r: 0, g: 0, b: 0.8, a: 1}
-    colorInput: {r: 0.8, g: 0.8, b: 0, a: 1}
+  - tipo: 9
+    palabraClave: '\npublic class '
+    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
+    colorInput: {r: 0.30994633, g: 0.754717, b: 0.3025988, a: 1}
   - tipo: 7
-    palabraClave: '}'
-    colorPalabraClave: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    colorInput: {r: 0, g: 0, b: 0, a: 0}
+    palabraClave: '\nvoid Update() '
+    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
+    colorInput: {r: 1, g: 1, b: 1, a: 0}
+  - tipo: 5
+    palabraClave: '\nvoid Start() '
+    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
+    colorInput: {r: 1, g: 1, b: 1, a: 0}
   misProgramas:
-  - nombreDelPrograma: Hola Mundo
-    secuenciaLineas: 000000000000000003000000080000000800000004000000
-  - nombreDelPrograma: Clase Jugador
-    secuenciaLineas: 0000000003000000040000000400000007000000
+  - nombreDelPrograma: Arbol de comportamiento
+    secuenciaLineas: 00000000000000000300000008000000080000000900000004000000
+  - nombreDelPrograma: Player Manager
+    secuenciaLineas: 0000000003000000080000000900000004000000050000000700000008000000
 --- !u!4 &334344274
 Transform:
   m_ObjectHideFlags: 0
@@ -2880,7 +2884,7 @@ Canvas:
   m_GameObject: {fileID: 2055541081}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1534675916}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3143,7 +3147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -461, y: -410}
+  m_AnchoredPosition: {x: -481, y: -410}
   m_SizeDelta: {x: 79.943, y: 79.5901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109783953
@@ -3193,14 +3197,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3231,7 +3235,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -429.19257, y: 0, z: -9.847168, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

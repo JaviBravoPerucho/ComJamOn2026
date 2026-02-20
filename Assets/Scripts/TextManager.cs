@@ -100,6 +100,7 @@ public class TextManager : MonoBehaviour
         wordManager = GetComponent<WordManager>();
 
         campoEntrada.onValueChanged.AddListener(ActualizarContador);
+        programaActualIndex = Random.Range(0, misProgramas.Length);
         ActualizarUIWordManager();
     }
 
@@ -163,7 +164,7 @@ public class TextManager : MonoBehaviour
         {
             textoDestino.text += "\n<color=#00FF00>--- FIN DEL PROGRAMA: " + programaActual.nombreDelPrograma.ToUpper() + " ---</color>\n\n";
             lineaActualIndex = 0;
-            programaActualIndex++;
+            //programaActualIndex++;
         }
     }
 
@@ -180,7 +181,7 @@ public class TextManager : MonoBehaviour
 
     private void ActualizarUIWordManager()
     {
-        siguienteSilaba.text = wordManager.SilabaActual;
+        siguienteSilaba.text = "Palabra que empiece por: " + wordManager.SilabaActual;
         rangoLongitud.text = "(Min " + wordManager.MinLength + " - Max " + wordManager.MaxLength + ")";
     }
 }
