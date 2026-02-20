@@ -615,7 +615,7 @@ MonoBehaviour:
   listaDialogos:
   - tipo: 0
     posiblesLineas:
-    - El kit esta libre, pero no por mucho tiempo. Preparate que sales.
+    - "El kit esta libre, pero no por mucho tiempo. Prep\xE1rate que sales."
     - "Espero que tengas la documentaci\xF3n abierta porque la vas a necesitar."
     - "Es un milagro que hoy nos veamos aqu\xED."
   - tipo: 2
@@ -660,25 +660,26 @@ MonoBehaviour:
   - tipo: 7
     posiblesLineas:
     - "Se acab\xF3."
-    - Si hay alguna interfaz mal, luego no quiero lloros.
+    - Hemos terminado por hoy.
   - tipo: 9
     posiblesLineas:
-    - Vamos a ver si esta todo bien.
-    - "\xA1Hora de corregir!"
+    - "Me voy a encargar de revisar to c\xF3digo a fondo."
+    - "\xBFQue has puesto ah\xED?, lo de respetar la arquitectura no va mucho contigo."
   - tipo: 12
     posiblesLineas:
-    - "No te llevas t\xFA el 5 ni pagando."
-    - "Con las pr\xE1cticas que me tra\xEDas, \xBFde verdad pensabas aprobar?"
+    - "Nos vemos el a\xF1o que viene."
+    - "Ni tus pr\xE1cticas, ni tu examen merecen la pena. Hasta el a\xF1o que viene."
   - tipo: 11
     posiblesLineas:
-    - Menos mal que no tengo que corregir tu examen en la extraordinaria.
-    - "M\xE1s o menos te defiendes con Android Studio, pero cuidadito que no te vea
-      por ah\xED."
+    - Justito pero aprobado estas.
+    - "No vengas a pedirme m\xE1s nota, porque el a\xF1o que viene a lo mejor te
+      la pido yo a ti."
+    - "Que pena que no te vaya a ver el a\xF1o que viene."
   - tipo: 10
     posiblesLineas:
-    - Buen trabajo, le sabes a Java y a ChatGPT.
-    - "Cuando quieras me haces una aplicaci\xF3n guapa para el m\xF3vil."
-    - Un trabajo bien hecho recibe una nota acorde.
+    - Enhorabuena, una arquitectura impecable.
+    - Muy buena estructura en general, algunos fallitos pero nada de lo que preocuparse.
+    - Todo bastante bien, aunque no te me despistes.
   dialoguePanel: {fileID: 1125222282}
   dialogueText: {fileID: 930253147}
   timeToLetter: 0.05
