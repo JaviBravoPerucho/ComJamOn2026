@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STRING TYPING
+  m_text: String Typing
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
   m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=red>JUGAR </color>
+  m_text: '<color=red>Jugar </color>
 
 '
   m_isRightToLeft: 0
@@ -1400,9 +1400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color=red>CONFIGURACION </color>
-
-'
+  m_text: "<color=red>Configuraci\xF3n</color>\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
   m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
