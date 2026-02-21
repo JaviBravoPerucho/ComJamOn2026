@@ -1001,12 +1001,12 @@ MonoBehaviour:
   listaDialogos:
   - tipo: 0
     posiblesLineas:
-    - "El kit esta libre, pero no por mucho tiempo. Prep\xE1rate que sales."
+    - "El kit est\xE1 libre, pero no por mucho tiempo. Prep\xE1rate que sales."
     - "Espero que tengas la documentaci\xF3n abierta porque la vas a necesitar."
     - "Es un milagro que hoy nos veamos aqu\xED."
   - tipo: 2
     posiblesLineas:
-    - "\xBFEstas seguro que esta bien eso? Ya lo veremos."
+    - "\xBFEstas seguro de que est\xE1 bien eso? Ya lo veremos."
     - "Esa variable no me suena muy bien, pero bueno haya t\xFA."
     - Decente.
     - Ya queda poco............... para que se acabe el tiempo.
@@ -1017,7 +1017,7 @@ MonoBehaviour:
 '
   - tipo: 3
     posiblesLineas:
-    - Como se repita un metodo suspendes.
+    - "Como se repita un m\xE9todo suspendes."
     - Si tanto te gusta repetir palabras, a lo mejor repites otra cosa.
   - tipo: 4
     posiblesLineas:
@@ -1037,12 +1037,13 @@ MonoBehaviour:
     - Comienza el examen, veamos cuanto tardas en conseguir el suspenso.
   - tipo: 5
     posiblesLineas:
-    - "\xBFEl enunciado tu siquiera lo tienes abierto?"
+    - "\xBFEl enunciado t\xFA siquiera lo has abierto?"
     - Esa variable tiene la sintaxis incorrecta.
   - tipo: 8
     posiblesLineas:
     - "Como vea alg\xFAn warning, vete preparando."
     - Vamos a ver que tiene que decir el compilador de la cosa esta.
+    - Si no compila, suspenso directo.
   - tipo: 7
     posiblesLineas:
     - "Se acab\xF3."
@@ -1055,6 +1056,7 @@ MonoBehaviour:
     posiblesLineas:
     - "Nos vemos el a\xF1o que viene."
     - "Ni tus pr\xE1cticas, ni tu examen merecen la pena. Hasta el a\xF1o que viene."
+    - "L\xEDnea roja."
   - tipo: 11
     posiblesLineas:
     - Justito pero aprobado estas.
