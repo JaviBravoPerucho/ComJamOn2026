@@ -821,6 +821,11 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1125222282}
   dialogueText: {fileID: 930253147}
   timeToLetter: 0.045
+  characterImage: {fileID: 949113162}
+  frame1: {fileID: 8276197807196226946, guid: 5798a3cd3c391a14791a1a2dd2eed1aa, type: 3}
+  frame2: {fileID: 2915465778783477366, guid: babadf86d2729744f8d3641280b4c988, type: 3}
+  frame3: {fileID: -2090015918981616252, guid: dc766388daad4ef4eaff527d9fd58833, type: 3}
+  flipDuration: 0.2
   letterEvent:
     Guid:
       Data1: -921874759

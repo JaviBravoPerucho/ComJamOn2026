@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using FMODUnity;
+using UnityEngine.UI;
 
 // 1. Defines los tipos de comportamiento/eventos
 public enum TipoDialogo
@@ -20,6 +21,8 @@ public enum TipoDialogo
     NotaMedia,
     NotaMala
 }
+
+
 
 // 2. Agrupas el enum con las posibles líneas que puede decir
 [System.Serializable]
@@ -42,6 +45,18 @@ public class Dialogue : MonoBehaviour
 
     [Header("Ajustes de Texto")]
     public float timeToLetter = 0.05f;
+
+    [Header("Avatar / Frames")]
+    [SerializeField] private Image characterImage;
+
+    [SerializeField] private Sprite frame1;
+    [SerializeField] private Sprite frame2;
+    [SerializeField] private Sprite frame3;
+
+    [SerializeField] private float flipDuration = 0.2f;
+
+    private bool flipped;
+    private bool isFlipping;
 
     // Guardamos la corrutina actual para poder detenerla si es necesario
     private Coroutine corrutinaEscritura;
@@ -98,8 +113,79 @@ public class Dialogue : MonoBehaviour
         // Nos aseguramos de que el panel esté visible
         dialoguePanel.SetActive(true);
 
+        CambiarFrame(tipoDeseado);
+
         // Iniciamos la nueva escritura y guardamos la referencia
         corrutinaEscritura = StartCoroutine(ShowLine(lineaElegida));
+    }
+
+    private void CambiarFrame(TipoDialogo tipo)
+    {
+        if (isFlipping) return;
+
+        Sprite nuevoSprite = ObtenerSpriteSegunTipo(tipo);
+        StartCoroutine(FlipAnimation(nuevoSprite));
+    }
+
+    private Sprite ObtenerSpriteSegunTipo(TipoDialogo tipo)
+    {
+        switch (tipo)
+        {
+            case TipoDialogo.Bien:
+            case TipoDialogo.BuenaNota:
+                return frame1;
+
+            case TipoDialogo.NotaMedia:
+            case TipoDialogo.Compilar:
+            case TipoDialogo.Corrigiendo:
+            case TipoDialogo.Comenzar:
+            case TipoDialogo.Preparate:
+                return frame2;
+
+            default:
+                return frame3;
+        }
+    }
+
+    private IEnumerator FlipAnimation(Sprite nuevoSprite)
+    {
+        isFlipping = true;
+
+        float halfDuration = flipDuration / 2f;
+
+        Quaternion startRot = characterImage.rectTransform.localRotation;
+        Quaternion midRot = Quaternion.Euler(0, 90f, 0);
+        Quaternion endRot = Quaternion.Euler(0, flipped ? 0f : 180f, 0);
+
+        float t = 0;
+
+        // Primera mitad (0  90)
+        while (t < halfDuration)
+        {
+            t += Time.deltaTime;
+            float lerp = t / halfDuration;
+            characterImage.rectTransform.localRotation =
+                Quaternion.Lerp(startRot, midRot, lerp);
+            yield return null;
+        }
+
+        // Cambiamos sprite en el punto medio
+        characterImage.sprite = nuevoSprite;
+
+        t = 0;
+
+        // Segunda mitad (90  180 o 0)
+        while (t < halfDuration)
+        {
+            t += Time.deltaTime;
+            float lerp = t / halfDuration;
+            characterImage.rectTransform.localRotation =
+                Quaternion.Lerp(midRot, endRot, lerp);
+            yield return null;
+        }
+
+        flipped = !flipped;
+        isFlipping = false;
     }
 
     private IEnumerator ShowLine(string linea)
