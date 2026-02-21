@@ -3883,7 +3883,7 @@ MonoBehaviour:
     colorPalabraClave: {r: 0, g: 0.67058825, b: 0.027450982, a: 1}
     colorInput: {r: 0, g: 0.6698113, b: 0.025961692, a: 1}
   - tipo: 13
-    palabraClave: '            std::cout << % << "\n"'
+    palabraClave: '            std::cout << % << ""'
     colorPalabraClave: {r: 0.7161356, g: 0.7264151, b: 0.7165341, a: 1}
     colorInput: {r: 0.7264151, g: 0.48418894, b: 0.18845676, a: 1}
   - tipo: 1
@@ -3891,7 +3891,7 @@ MonoBehaviour:
     colorPalabraClave: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
     colorInput: {r: 0.74509805, g: 0.7176471, b: 1, a: 1}
   - tipo: 4
-    palabraClave: '    %(float width, float height){} _width(width), _height(height); '
+    palabraClave: '    %(float width, float height): _width(width), _height(height){}; '
     colorPalabraClave: {r: 1, g: 1, b: 1, a: 1}
     colorInput: {r: 0.86274517, g: 0.8470589, b: 0.5686275, a: 1}
   - tipo: 7
