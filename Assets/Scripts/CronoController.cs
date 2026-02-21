@@ -116,6 +116,6 @@ public class CronoController : MonoBehaviour
 
     public float GetRemainingTimePercentage()
     {
-        return (maxTime- actualTime)/ actualTime;
+        return (maxTime- actualTime)/ maxTime;
     }
 }
