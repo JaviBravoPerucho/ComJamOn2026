@@ -753,17 +753,18 @@ MonoBehaviour:
   listaDialogos:
   - tipo: 0
     posiblesLineas:
-    - "\xBFTe has descargado la version correcta de Android Studio?"
+    - Te has descargado la version correcta de Android Studio?
     - "Buenos d\xEDas, este examen lo har\xEDa yo en nada y menos."
     - "Ve descargando los VirtualDevices y prepara la pr\xE1ctica que el examen comienza
       pronto."
+    - Tienes bien el gradle?
   - tipo: 2
     posiblesLineas:
     - "Esa respuesta es igual a la que yo pondr\xEDa."
     - Se nota que sabes programar.
     - "Buen c\xF3digo el que te marcas.\n"
     - Eres bueno con Java.
-    - "Sigue as\xED y te aprobare."
+    - "Sigue as\xED y te aprobar\xE9."
     - Cuidado con el tiempo.
     - Me gusta como piensas.
   - tipo: 3
@@ -772,7 +773,7 @@ MonoBehaviour:
     - No repitas palabras.
   - tipo: 4
     posiblesLineas:
-    - "\xBFA donde vas? \xA1Esta bien claro el rango!"
+    - "\xBFA d\xF3nde vas? \xA1Est\xE1 bien claro el rango!"
     - "Longitud incorrecta, as\xED no vas a aprobar."
     - "\xA1El rango!, lee bien el enunciado.\n"
   - tipo: 6
@@ -781,7 +782,9 @@ MonoBehaviour:
     - 'Ya dijimos que eso no entraba en el examen.
 
 '
-    - "\xBFSabes que estamos programando en Java, no?\n"
+    - 'Sabes que estamos programando en Java, no?
+
+'
     - "\xA1Eso es de Kotlin por Dios!, usa Java."
   - tipo: 1
     posiblesLineas:
@@ -790,8 +793,8 @@ MonoBehaviour:
     - "\xA1Venga!, que no se va hacer solo el c\xF3digo.  "
   - tipo: 5
     posiblesLineas:
-    - "\xBFEl enunciado para que est\xE1?"
-    - "Las palabra no empieza as\xED."
+    - "\xBFEl enunciado para qu\xE9 est\xE1?"
+    - "La palabra no empieza as\xED."
   - tipo: 8
     posiblesLineas:
     - "Como Java no entienda lo que has hecho, yo tampoco lo entender\xE9."
@@ -802,12 +805,13 @@ MonoBehaviour:
     - Si hay alguna interfaz mal, luego no quiero lloros.
   - tipo: 9
     posiblesLineas:
-    - Vamos a ver si esta todo bien.
+    - "Vamos a ver si est\xE1 todo bien."
     - "\xA1Hora de corregir!"
   - tipo: 12
     posiblesLineas:
     - "No te llevas t\xFA el 5 ni pagando."
     - "Con las pr\xE1cticas que me tra\xEDas, \xBFde verdad pensabas aprobar?"
+    - "Tr\xE1ete Kleenex a la revisi\xF3n."
   - tipo: 11
     posiblesLineas:
     - Menos mal que no tengo que corregir tu examen en la extraordinaria.
