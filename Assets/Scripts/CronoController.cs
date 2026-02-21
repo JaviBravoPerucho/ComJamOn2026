@@ -82,4 +82,9 @@ public class CronoController : MonoBehaviour
         // Ahora empieza en 0 y termina en 1.
         return (actualTime)/ maxTime;
     }
+
+    public float GetRemainingTimePercentage()
+    {
+        return (maxTime- actualTime)/ actualTime;
+    }
 }

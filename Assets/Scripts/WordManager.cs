@@ -45,7 +45,7 @@ public class WordManager : MonoBehaviour
     {
         correccion = new sesgoCorreccion();
         correccion.numPalabrasConseguidas = 0;
-        correccion.factorTiempoRestante = cronoController.GetTimePorcentage();
+        correccion.factorTiempoRestante = cronoController.GetRemainingTimePercentage();
         correccion.longitudTotalPalabras = 0;
         correccion.nivelDificultad = GameManager.Instance.Level;
 
