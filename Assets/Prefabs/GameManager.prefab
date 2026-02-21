@@ -57,6 +57,13 @@ MonoBehaviour:
       Data3: 1864292997
       Data4: 1615078288
     Path: event:/MusicaMenu
+  Button:
+    Guid:
+      Data1: 1399630344
+      Data2: 1149339300
+      Data3: 1518523316
+      Data4: 892225838
+    Path: event:/Boton
 --- !u!114 &909923420300096930
 MonoBehaviour:
   m_ObjectHideFlags: 0

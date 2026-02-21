@@ -311,13 +311,14 @@ MonoBehaviour:
   - {fileID: -96504050892128418}
   - {fileID: 8219245701837283560}
   - {fileID: 6815362621867833182}
+  - {fileID: 4347342692541088261}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4158692059359361670}
   StringsBanks:
   - {fileID: 3684939877609796469}
   cacheVersion: 131858
-  cacheTime: 639072868446676867
+  cacheTime: 639072914923031808
   SerializableEventsDict:
   - key: event:/Teclas
     index: 0
@@ -339,6 +340,8 @@ MonoBehaviour:
     index: 8
   - key: event:/MusicaMenu
     index: 9
+  - key: event:/Boton
+    index: 10
 --- !u!114 &720642069849263145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,10 +435,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639072868446676867
+  lastModified: 639072914923031808
   FileSizes:
   - Name: Desktop
-    Value: 1212
+    Value: 1248
   Exists: 1
 --- !u!114 &4158692059359361670
 MonoBehaviour:
@@ -452,11 +455,38 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639072868446666866
+  lastModified: 639072914923011841
   FileSizes:
   - Name: Desktop
-    Value: 694784
+    Value: 700256
   Exists: 1
+--- !u!114 &4347342692541088261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Boton
+  m_EditorClassIdentifier: 
+  Path: event:/Boton
+  Guid:
+    Data1: 1399630344
+    Data2: 1149339300
+    Data3: 1518523316
+    Data4: 892225838
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 272
 --- !u!114 &6815362621867833182
 MonoBehaviour:
   m_ObjectHideFlags: 0

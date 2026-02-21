@@ -19,9 +19,15 @@ public class GameManager : MonoBehaviour
 
     [Header("Audio")]
     public EventReference Music;
+    public EventReference Button;
 
     private EventInstance musicInstance;
     private bool musicStarted;
+
+    public void ButtonSound()
+    {
+        RuntimeManager.PlayOneShot(Button);
+    }
 
     private void Awake()
     {
