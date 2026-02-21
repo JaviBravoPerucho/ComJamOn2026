@@ -756,27 +756,27 @@ MonoBehaviour:
   diccionarioSintaxis:
   - tipo: 0
     palabraClave: 'using '
-    colorPalabraClave: {r: 0.15419187, g: 0.5426649, b: 0.9339623, a: 1}
+    colorPalabraClave: {r: 0.3372549, g: 0.6117647, b: 0.83921576, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 3
     palabraClave: '\npublic enum '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 0.61424375, g: 1, b: 0.2028302, a: 1}
+    colorPalabraClave: {r: 0.3372549, g: 0.6117647, b: 0.83921576, a: 1}
+    colorInput: {r: 0.72156864, g: 0.8431373, b: 0.627451, a: 1}
   - tipo: 4
     palabraClave: '\nvoid Awake() '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
+    colorPalabraClave: {r: 0.3372549, g: 0.6117647, b: 0.83921576, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 8
-    palabraClave: 
-    colorPalabraClave: {r: 1, g: 1, b: 1, a: 1}
+    palabraClave: '\npublic static int '
+    colorPalabraClave: {r: 0.3372549, g: 0.6117647, b: 0.83921576, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 9
     palabraClave: '\npublic class '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
-    colorInput: {r: 0.30994633, g: 0.754717, b: 0.3025988, a: 1}
+    colorPalabraClave: {r: 0.3372549, g: 0.6117647, b: 0.83921576, a: 1}
+    colorInput: {r: 0.30588236, g: 0.78823537, b: 0.6901961, a: 1}
   - tipo: 7
     palabraClave: '\nvoid Update() '
-    colorPalabraClave: {r: 0.15294118, g: 0.5411765, b: 0.9333334, a: 1}
+    colorPalabraClave: {r: 0.3372549, g: 0.6117647, b: 0.8392157, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 5
     palabraClave: '\nvoid Start() '
@@ -3246,9 +3246,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Escribe palabras en espa\xF1ol dentro del recuadro blanco.\n\n- La longitud
-    se debe adaptar a la requerida.\n\n- Las palabras deben empezar por la s\xEDlaba
-    correcta y se escriben completas.\n\n- Nada de nombres propios.\n\n\xA1Buena
+  m_text: "- Escribe palabras en espa\xF1ol dentro del recuadro blanco.\n- La longitud
+    se debe adaptar al intervalo.\n- Las palabras deben empezar por la s\xEDlaba
+    correcta y se escriben completas.\n- Nada de nombres propios, ni conjugaciones.\n\n\xA1Buena
     suerte! - - - - >"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
@@ -3288,7 +3288,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 24.56
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -4053,8 +4053,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 2147483648
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
