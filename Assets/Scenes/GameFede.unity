@@ -232,6 +232,13 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1125222282}
   dialogueText: {fileID: 930253147}
   timeToLetter: 0.05
+  letterEvent:
+    Guid:
+      Data1: -921874759
+      Data2: 1128542775
+      Data3: 1380786592
+      Data4: 1970878375
+    Path: event:/hablarProfe
 --- !u!4 &47909504
 Transform:
   m_ObjectHideFlags: 0

@@ -682,7 +682,14 @@ MonoBehaviour:
     - Todo bastante bien, aunque no te me despistes.
   dialoguePanel: {fileID: 1125222282}
   dialogueText: {fileID: 930253147}
-  timeToLetter: 0.05
+  timeToLetter: 0.04
+  letterEvent:
+    Guid:
+      Data1: -921874759
+      Data2: 1128542775
+      Data3: 1380786592
+      Data4: 1970878375
+    Path: event:/hablarProfe
 --- !u!4 &329370473
 Transform:
   m_ObjectHideFlags: 0

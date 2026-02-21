@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using FMODUnity;
 
 // 1. Defines los tipos de comportamiento/eventos
 public enum TipoDialogo
@@ -44,6 +45,8 @@ public class Dialogue : MonoBehaviour
 
     // Guardamos la corrutina actual para poder detenerla si es necesario
     private Coroutine corrutinaEscritura;
+
+    public EventReference letterEvent;
 
     void Start()
     {
@@ -107,6 +110,7 @@ public class Dialogue : MonoBehaviour
         {
             dialogueText.text += c;
             // Usamos la variable timeToLetter que ya tenías
+            RuntimeManager.PlayOneShot(letterEvent);
             yield return new WaitForSeconds(timeToLetter);
         }
 
