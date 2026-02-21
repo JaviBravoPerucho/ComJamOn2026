@@ -2,6 +2,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 // 1. Enumeración con todos los tipos de líneas que puedes tener en C++
 public enum TipoInstruccionCpp
@@ -50,6 +51,12 @@ public class TextManager : MonoBehaviour
     private GameObject scrollbar;
 
     private ScrollBarController scrollbarcontroller;
+
+    public EventReference typeEvent;
+    public EventReference enterEvent;
+    public EventReference backEvent;
+
+
 
     // 2. Definición visual (Palabras y colores)
     [System.Serializable]
@@ -163,8 +170,10 @@ public class TextManager : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
+            RuntimeManager.PlayOneShot(enterEvent);
             if (wordManager.TryWord(campoEntrada.text))
             {
                 EnviarTexto();
@@ -180,6 +189,8 @@ public class TextManager : MonoBehaviour
     public void ActualizarContador(string text)
     {
         contadorLongitud.text = text.Length.ToString();
+        if (Input.GetKeyDown(KeyCode.Backspace)) RuntimeManager.PlayOneShot(backEvent);
+        else RuntimeManager.PlayOneShot(typeEvent);
     }
 
     public void EnviarTexto()
