@@ -317,7 +317,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3684939877609796469}
   cacheVersion: 131858
-  cacheTime: 639072881406362558
+  cacheTime: 639072868446676867
   SerializableEventsDict:
   - key: event:/Teclas
     index: 0
@@ -432,7 +432,7 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639072881406362558
+  lastModified: 639072868446676867
   FileSizes:
   - Name: Desktop
     Value: 1212
@@ -452,7 +452,7 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639072881406351907
+  lastModified: 639072868446666866
   FileSizes:
   - Name: Desktop
     Value: 694784
