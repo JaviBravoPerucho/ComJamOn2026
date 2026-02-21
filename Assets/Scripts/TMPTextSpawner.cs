@@ -22,6 +22,7 @@ public class TMPTextSpawner : MonoBehaviour
     public float lifetime = 5f;
 
     private float timer;
+    public TMP_FontAsset fontAsset;
 
     void Update()
     {
@@ -60,6 +61,7 @@ public class TMPTextSpawner : MonoBehaviour
 
         // Agregar TMP_Text (3D)
         TextMeshPro tmp = go.AddComponent<TextMeshPro>();
+        tmp.font = fontAsset;
         tmp.text = GenerateRandomText();
         tmp.fontSize = fontSize;
         tmp.color = Random.ColorHSV();
