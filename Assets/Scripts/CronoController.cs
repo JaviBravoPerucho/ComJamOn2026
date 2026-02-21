@@ -15,11 +15,16 @@ public class CronoController : MonoBehaviour
 
     private float actualTime = 0.0f;
     private Image crono_image;
+    private FMOD.Studio.EventInstance clockInstance;
+
+
+    public FMOD.Studio.EventInstance getClockInstance() {return clockInstance;}
 
     void Start()
     {
         crono_image = GetComponent<Image>();
         actualTime = 0.0f;
+        clockInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Clock");
     }
 
     void Update()
@@ -55,12 +60,17 @@ public class CronoController : MonoBehaviour
     public void StopCrono()
     {
         isRunning = false;
+        clockInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void ResetCrono()
     {
         actualTime = 0.0f;
         isRunning = true;
+
+
+        clockInstance.start();
+        clockInstance.release();
     }
 
     public bool IsRunning()

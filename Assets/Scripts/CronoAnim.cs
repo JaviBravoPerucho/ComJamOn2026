@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class CronoAnim : MonoBehaviour
     private Image cronoImage;
     private CronoController cronoController;
     private Vector3 originalScale;
+
+
 
     void Start()
     {
@@ -32,6 +35,7 @@ public class CronoAnim : MonoBehaviour
 
                 // Multiplicamos la velocidad base para que se note la aceleración
                 float velocidadActual = pulseSpeed * (1 + (inc * 10));
+                cronoController.getClockInstance().setParameterByName("pitchClock", Mathf.Clamp01(velocidadActual));
 
                 // 2. Parpadeo de color (ahora está dentro del if)
                 cronoImage.color = Color.Lerp(Color.white, Color.red, Mathf.PingPong(Time.time * velocidadActual, 1));

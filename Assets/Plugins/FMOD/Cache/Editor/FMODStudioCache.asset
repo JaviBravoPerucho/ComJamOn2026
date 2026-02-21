@@ -1,93 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9088491233113936627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TeclaEnter
-  m_EditorClassIdentifier: 
-  Path: event:/TeclaEnter
-  Guid:
-    Data1: 2002762443
-    Data2: 1183826202
-    Data3: 171790761
-    Data4: -633562128
-  Banks:
-  - {fileID: 4158692059359361670}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 202
---- !u!114 &-7429742864973569895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Teclas
-  m_EditorClassIdentifier: 
-  Path: event:/Teclas
-  Guid:
-    Data1: -1194778259
-    Data2: 1102249599
-    Data3: 1775545010
-    Data4: 2082007335
-  Banks:
-  - {fileID: 4158692059359361670}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 300
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 3684939877609796469}
-  - {fileID: 4158692059359361670}
-  EditorEvents:
-  - {fileID: -7429742864973569895}
-  - {fileID: -9088491233113936627}
-  - {fileID: 720642069849263145}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 4158692059359361670}
-  StringsBanks:
-  - {fileID: 3684939877609796469}
-  cacheVersion: 131858
-  cacheTime: 639072777172146814
-  SerializableEventsDict:
-  - key: event:/Teclas
-    index: 0
-  - key: event:/TeclaEnter
-    index: 1
-  - key: event:/TeclaBack
-    index: 2
---- !u!114 &720642069849263145
+--- !u!114 &-7661210751946782091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +19,7 @@ MonoBehaviour:
     Data3: 1617998014
     Data4: 1606999668
   Banks:
-  - {fileID: 4158692059359361670}
+  - {fileID: -1820854966567773229}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -114,7 +27,62 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 202
---- !u!114 &3684939877609796469
+--- !u!114 &-5979351356341582786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Clock
+  m_EditorClassIdentifier: 
+  Path: event:/Clock
+  Guid:
+    Data1: -123472999
+    Data2: 1185753710
+    Data3: 213816486
+    Data4: 702539081
+  Banks:
+  - {fileID: -1820854966567773229}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8767936458685020122}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30194
+--- !u!114 &-5907541436369001858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TeclaEnter
+  m_EditorClassIdentifier: 
+  Path: event:/TeclaEnter
+  Guid:
+    Data1: 2002762443
+    Data2: 1183826202
+    Data3: 171790761
+    Data4: -633562128
+  Banks:
+  - {fileID: -1820854966567773229}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 202
+--- !u!114 &-5763456630223692644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,12 +97,12 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639072777172146814
+  lastModified: 639072793454435090
   FileSizes:
   - Name: Desktop
-    Value: 850
+    Value: 950
   Exists: 1
---- !u!114 &4158692059359361670
+--- !u!114 &-1820854966567773229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,8 +117,95 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639072777172146814
+  lastModified: 639072793454435090
   FileSizes:
   - Name: Desktop
-    Value: 14720
+    Value: 239456
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -5763456630223692644}
+  - {fileID: -1820854966567773229}
+  EditorEvents:
+  - {fileID: 8255763145293666632}
+  - {fileID: -7661210751946782091}
+  - {fileID: -5979351356341582786}
+  - {fileID: -5907541436369001858}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -1820854966567773229}
+  StringsBanks:
+  - {fileID: -5763456630223692644}
+  cacheVersion: 131858
+  cacheTime: 639072793454435090
+  SerializableEventsDict:
+  - key: event:/Teclas
+    index: 0
+  - key: event:/TeclaBack
+    index: 1
+  - key: event:/Clock
+    index: 2
+  - key: event:/TeclaEnter
+    index: 3
+--- !u!114 &8255763145293666632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Teclas
+  m_EditorClassIdentifier: 
+  Path: event:/Teclas
+  Guid:
+    Data1: -1194778259
+    Data2: 1102249599
+    Data3: 1775545010
+    Data4: 2082007335
+  Banks:
+  - {fileID: -1820854966567773229}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
+--- !u!114 &8767936458685020122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clock/pitchClock
+  m_EditorClassIdentifier: 
+  Name: pitchClock
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3991496532
+    data2: 3273147543
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1

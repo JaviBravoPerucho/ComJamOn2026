@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{c20be123-9a2c-4b48-85cf-84b7ad54b18a}">
+		<property name="name">
+			<value>pitchClock</value>
+		</property>
+		<relationship name="folder">
+			<destination>{741b7eec-24e0-4caa-815d-da1776bc1a98}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e9290182-cb3d-4d73-be39-3b0ac0874dea}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e9290182-cb3d-4d73-be39-3b0ac0874dea}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
