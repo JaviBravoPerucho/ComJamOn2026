@@ -5616,6 +5616,10 @@ PrefabInstance:
       propertyPath: buttonCompile
       value: 
       objectReference: {fileID: 1546159130}
+    - target: {fileID: 5014776318945773817, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
+      propertyPath: transformSegundos
+      value: 
+      objectReference: {fileID: 186541400}
     - target: {fileID: 5236496268557057013, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: m_Color.a
       value: 1

@@ -181,7 +181,12 @@ public class TextManager : MonoBehaviour
             {
                 campoEntrada.text = "";
             }
-            campoEntrada.ActivateInputField();
+            if (cronoController.isRunning)
+            {
+                Debug.Log("lesgo");
+                campoEntrada.ActivateInputField();
+            }
+            
         }
     }
 

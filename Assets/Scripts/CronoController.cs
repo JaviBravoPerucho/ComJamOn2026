@@ -1,6 +1,7 @@
+using FMODUnity;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using FMODUnity;
 
 public class CronoController : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class CronoController : MonoBehaviour
 
     [SerializeField]
     private GameObject buttonCompile;
+
+    [SerializeField]
+    private GameObject extraSeconds;
+
+    [SerializeField]
+    private Transform transformSegundos;
 
     private float actualTime = 0.0f;
     private Image crono_image;
@@ -89,6 +96,12 @@ public class CronoController : MonoBehaviour
         {
             actualTime = 0;
         }
+
+        //GameObject text = Instantiate(extraSeconds, transformSegundos);
+
+        //text.GetComponent<TMP_Text>().text = "+" + extraSeconds.ToString() + "segundos";
+
+       // Destroy(text, 2f);
     }
     public bool IsTimeUp()
     {

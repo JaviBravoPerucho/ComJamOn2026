@@ -137,7 +137,6 @@ public class Dialogue : MonoBehaviour
 
             case TipoDialogo.NotaMedia:
             case TipoDialogo.Compilar:
-            case TipoDialogo.Corrigiendo:
             case TipoDialogo.Comenzar:
             case TipoDialogo.Preparate:
                 return frame2;

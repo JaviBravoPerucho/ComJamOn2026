@@ -171,6 +171,8 @@ MonoBehaviour:
   fill: 0
   wordManager: {fileID: 0}
   buttonCompile: {fileID: 0}
+  extraSeconds: {fileID: 2646768952953121488, guid: 57b8f9facf207514d8e71fbb8c970d4d, type: 3}
+  transformSegundos: {fileID: 0}
   tiempoAcabado:
     Guid:
       Data1: -1535473715
