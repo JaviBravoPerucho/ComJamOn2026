@@ -101,7 +101,7 @@ public class CronoController : MonoBehaviour
 
         //text.GetComponent<TMP_Text>().text = "+" + extraSeconds.ToString() + "segundos";
 
-       // Destroy(text, 2f);
+        //Destroy(text, 2f);
     }
     public bool IsTimeUp()
     {
