@@ -12,7 +12,7 @@ public class PanelNota : MonoBehaviour
     {
         nota.text = GameManager.Instance.Puntuacion.ToString("0.#");
         float mejorPuntuacion = PlayerPrefs.GetFloat("MejorNotaLevel" + GameManager.Instance.Level.ToString());
-
+        Debug.Log("MejorNotaLevel" + GameManager.Instance.Level.ToString());
         if (GameManager.Instance.Puntuacion > mejorPuntuacion) PlayerPrefs.SetFloat("MejorNotaLevel" + GameManager.Instance.Level.ToString(), GameManager.Instance.Puntuacion);
         PlayerPrefs.Save();
     }

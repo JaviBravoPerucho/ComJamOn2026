@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
     public void LoadGame(int level)
     {
         JuegoAcabado = false;
-        Level = level;
+        GameManager.Instance.Level = level;
         Debug.Log("LEVEL: " + level);
         ResetPoints();
 
