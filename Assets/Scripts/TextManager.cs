@@ -1,6 +1,6 @@
-using UnityEngine;
-using TMPro;
 using System.Linq;
+using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 // 1. Enumeración con todos los tipos de líneas que puedes tener en C++
@@ -200,9 +200,8 @@ public class TextManager : MonoBehaviour
             string hexClave = ColorUtility.ToHtmlStringRGBA(sintaxis.colorPalabraClave);
             string hexInput = ColorUtility.ToHtmlStringRGBA(sintaxis.colorInput);
 
-            string nuevaLinea = $"<color=#{hexClave}>{sintaxis.palabraClave}</color><color=#{hexInput}>{campoEntrada.text}</color>\n";
-            textoDestino.text += nuevaLinea;
-
+            string nuevaLinea = $"<color=#{hexClave}>{sintaxis.palabraClave}</color>\n";
+            textoDestino.text += nuevaLinea.Replace("%", $"<color=#{hexInput}>{campoEntrada.text}</color>");
 
             string palabraClaveProcesada = sintaxis.palabraClave.Replace("\\n", "\n");
             // Incrementamos el contador global y comprobamos el scroll

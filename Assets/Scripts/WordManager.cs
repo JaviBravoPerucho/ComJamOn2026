@@ -36,6 +36,7 @@ public class WordManager : MonoBehaviour
 
     private sesgoCorreccion correccion;
 
+
     void Start()
     {
     }

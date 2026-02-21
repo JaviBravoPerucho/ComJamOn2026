@@ -3619,51 +3619,51 @@ MonoBehaviour:
   scrollbar: {fileID: 971936059}
   diccionarioSintaxis:
   - tipo: 0
-    palabraClave: '#include '
+    palabraClave: '#include %'
     colorPalabraClave: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
     colorInput: {r: 0.75294125, g: 0.5294118, b: 0.25882354, a: 1}
   - tipo: 3
-    palabraClave: '\nenum '
+    palabraClave: \nenum %
     colorPalabraClave: {r: 0.27450982, g: 0.52156866, b: 0.7176471, a: 1}
     colorInput: {r: 0.33333334, g: 0.7176471, b: 0.41960788, a: 1}
   - tipo: 9
-    palabraClave: '\nclass '
+    palabraClave: \nclass %
     colorPalabraClave: {r: 0.27394092, g: 0.5218516, b: 0.7169812, a: 1}
     colorInput: {r: 0.33481666, g: 0.7169812, b: 0.42086333, a: 1}
   - tipo: 8
-    palabraClave: '      '
+    palabraClave: '%'
     colorPalabraClave: {r: 1, g: 1, b: 1, a: 0}
     colorInput: {r: 0.70851773, g: 0.9056604, b: 0.5339979, a: 1}
   - tipo: 6
-    palabraClave: '\nvoid  '
+    palabraClave: \nvoid  %
     colorPalabraClave: {r: 0.27450982, g: 0.52156866, b: 0.7176471, a: 1}
     colorInput: {r: 0.8773585, g: 0.8352526, b: 0.5504183, a: 1}
   - tipo: 12
-    palabraClave: 'int '
+    palabraClave: int %
     colorPalabraClave: {r: 0.27450982, g: 0.52156866, b: 0.7176471, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 10
-    palabraClave: '\nif '
+    palabraClave: \nif %
     colorPalabraClave: {r: 0.6901961, g: 0.36862746, b: 0.58431375, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 11
-    palabraClave: '\nfor '
+    palabraClave: \nfor %
     colorPalabraClave: {r: 0.6901961, g: 0.36862746, b: 0.58431375, a: 1}
     colorInput: {r: 0.31461376, g: 0.6603774, b: 0.38124445, a: 1}
   - tipo: 14
-    palabraClave: 'return '
+    palabraClave: return %
     colorPalabraClave: {r: 0.6886792, g: 0.36707902, b: 0.5833748, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 16
-    palabraClave: //
+    palabraClave: //%
     colorPalabraClave: {r: 0, g: 0.67058825, b: 0.027450982, a: 1}
     colorInput: {r: 0, g: 0.6698113, b: 0.025961692, a: 1}
   - tipo: 13
-    palabraClave: 'std::cout << '
+    palabraClave: std::cout << % << "\n"
     colorPalabraClave: {r: 0.7161356, g: 0.7264151, b: 0.7165341, a: 1}
     colorInput: {r: 0.7264151, g: 0.48418894, b: 0.18845676, a: 1}
   - tipo: 1
-    palabraClave: '\n#define '
+    palabraClave: \n#define %
     colorPalabraClave: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
     colorInput: {r: 0.5404356, g: 0.40258992, b: 0.7830189, a: 1}
   misProgramas:
