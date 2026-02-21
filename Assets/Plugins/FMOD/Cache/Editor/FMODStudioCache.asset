@@ -211,6 +211,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 950
   Exists: 1
+--- !u!114 &-2239160300564096336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Correcto
+  m_EditorClassIdentifier: 
+  Path: event:/Correcto
+  Guid:
+    Data1: -1484148949
+    Data2: 1285844980
+    Data3: -1744970082
+    Data4: 1864349453
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 935
 --- !u!114 &-1820854966567773229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +258,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 239456
   Exists: 1
+--- !u!114 &-96504050892128418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tiempo
+  m_EditorClassIdentifier: 
+  Path: event:/Tiempo
+  Guid:
+    Data1: -1535473715
+    Data2: 1270805512
+    Data3: 1791149982
+    Data4: -858417364
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1828
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,13 +306,16 @@ MonoBehaviour:
   - {fileID: 720642069849263145}
   - {fileID: -9214593147032122635}
   - {fileID: -7790198873543033325}
+  - {fileID: 2436887551716063518}
+  - {fileID: -2239160300564096336}
+  - {fileID: -96504050892128418}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4158692059359361670}
   StringsBanks:
   - {fileID: 3684939877609796469}
   cacheVersion: 131858
-  cacheTime: 639072810825532784
+  cacheTime: 639072843487448323
   SerializableEventsDict:
   - key: event:/Teclas
     index: 0
@@ -270,6 +327,12 @@ MonoBehaviour:
     index: 3
   - key: event:/hablarProfe
     index: 4
+  - key: event:/Equivocarse
+    index: 5
+  - key: event:/Correcto
+    index: 6
+  - key: event:/Tiempo
+    index: 7
 --- !u!114 &720642069849263145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +384,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2436887551716063518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Equivocarse
+  m_EditorClassIdentifier: 
+  Path: event:/Equivocarse
+  Guid:
+    Data1: -2004084760
+    Data2: 1190249088
+    Data3: -172352856
+    Data4: 463481115
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 437
 --- !u!114 &3684939877609796469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,10 +426,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639072810825532784
+  lastModified: 639072843487448323
   FileSizes:
   - Name: Desktop
-    Value: 992
+    Value: 1132
   Exists: 1
 --- !u!114 &4158692059359361670
 MonoBehaviour:
@@ -356,10 +446,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639072810825505373
+  lastModified: 639072843487428347
   FileSizes:
   - Name: Desktop
-    Value: 243072
+    Value: 281696
   Exists: 1
 --- !u!114 &8255763145293666632
 MonoBehaviour:

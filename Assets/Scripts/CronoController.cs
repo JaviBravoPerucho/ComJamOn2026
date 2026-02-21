@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class CronoController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class CronoController : MonoBehaviour
     private float actualTime = 0.0f;
     private Image crono_image;
     private FMOD.Studio.EventInstance clockInstance;
+    public EventReference tiempoAcabado;
 
 
     public FMOD.Studio.EventInstance getClockInstance() {return clockInstance;}
@@ -38,6 +40,7 @@ public class CronoController : MonoBehaviour
 
         if (actualTime >= maxTime)
         {
+            RuntimeManager.PlayOneShot(tiempoAcabado);
             StopCrono();
             GameManager.Instance.JuegoIniciado = false;
             GameManager.Instance.Puntuacion = wordManager.calcularNota();

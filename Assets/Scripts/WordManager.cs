@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Text;
 using UnityEngine;
+using FMODUnity;
 
 
 public class WordManager : MonoBehaviour
@@ -36,10 +37,8 @@ public class WordManager : MonoBehaviour
 
     private sesgoCorreccion correccion;
 
-
-    void Start()
-    {
-    }
+    public EventReference errorEvent;
+    public EventReference correctEvent;
 
     public float calcularNota()
     {
@@ -111,6 +110,7 @@ public class WordManager : MonoBehaviour
         if (palabra.Length < MinLength || palabra.Length > MaxLength)
         {
             shake2D.Shake(0.2f, 0.1f);
+            RuntimeManager.PlayOneShot(errorEvent);
             Debug.Log("Longitud incorrecta");
             if (dialogue)
             {
@@ -123,6 +123,7 @@ public class WordManager : MonoBehaviour
         if (!palabra.StartsWith(SilabaActual))
         {
             shake2D.Shake(0.2f, 0.1f);
+            RuntimeManager.PlayOneShot(errorEvent);
             Debug.Log("No empieza por la sílaba correcta");
             if (dialogue)
             {
@@ -135,6 +136,7 @@ public class WordManager : MonoBehaviour
         if (!LoadWords.Instance.Existe(palabra))
         {
             shake2D.Shake(0.2f, 0.1f);
+            RuntimeManager.PlayOneShot(errorEvent);
             Debug.Log("La palabra no existe");
             if (dialogue)
             {
@@ -146,6 +148,7 @@ public class WordManager : MonoBehaviour
         if (palabrasUsadas.Contains(palabra))
         {
             shake2D.Shake(0.2f, 0.1f);
+            RuntimeManager.PlayOneShot(errorEvent);
             Debug.Log("Palabra ya usada");
             if (dialogue)
             {
@@ -155,6 +158,8 @@ public class WordManager : MonoBehaviour
         }
 
         palabrasUsadas.Add(palabra);
+
+        RuntimeManager.PlayOneShot(correctEvent);
 
         if (cronoController)
         {

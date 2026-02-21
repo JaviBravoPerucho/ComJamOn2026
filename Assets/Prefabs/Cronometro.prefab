@@ -166,8 +166,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 60
+  extraTime: 2
   isRunning: 1
   fill: 0
+  wordManager: {fileID: 0}
+  buttonCompile: {fileID: 0}
+  tiempoAcabado:
+    Guid:
+      Data1: -1535473715
+      Data2: 1270805512
+      Data3: 1791149982
+      Data4: -858417364
+    Path: event:/Tiempo
 --- !u!114 &920429160687235946
 MonoBehaviour:
   m_ObjectHideFlags: 0

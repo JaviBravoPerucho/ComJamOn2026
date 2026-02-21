@@ -3676,6 +3676,20 @@ MonoBehaviour:
   minRangeMax: 6
   minExtraRange: 3
   maxExtraRange: 7
+  errorEvent:
+    Guid:
+      Data1: -2004084760
+      Data2: 1190249088
+      Data3: -172352856
+      Data4: 463481115
+    Path: event:/Equivocarse
+  correctEvent:
+    Guid:
+      Data1: -1484148949
+      Data2: 1285844980
+      Data3: -1744970082
+      Data4: 1864349453
+    Path: event:/Correcto
 --- !u!114 &1554259975
 MonoBehaviour:
   m_ObjectHideFlags: 0
