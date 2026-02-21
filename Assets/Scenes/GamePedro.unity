@@ -3659,6 +3659,13 @@ MonoBehaviour:
       Data3: 1617998014
       Data4: 1606999668
     Path: event:/TeclaBack
+  winEvent:
+    Guid:
+      Data1: -1358229082
+      Data2: 1075221243
+      Data3: -832660050
+      Data4: 400940257
+    Path: event:/victoria
   diccionarioSintaxis:
   - tipo: 0
     palabraClave: '#include "%.h"'

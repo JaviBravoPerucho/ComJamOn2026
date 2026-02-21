@@ -55,8 +55,7 @@ public class TextManager : MonoBehaviour
     public EventReference typeEvent;
     public EventReference enterEvent;
     public EventReference backEvent;
-
-
+    public EventReference winEvent;
 
     // 2. Definición visual (Palabras y colores)
     [System.Serializable]
@@ -221,6 +220,8 @@ public class TextManager : MonoBehaviour
             contadorLineasTotales += lineasAgregadas;
             //AplicarScroll();
 
+            
+
             if (scrollbarcontroller && contadorLineasTotales > lineasMaximasAntesDeSubir)
             {
                 scrollbarcontroller.OnScrollChanged((contadorLineasTotales - lineasMaximasAntesDeSubir) * alturaDeLinea / scrollbarcontroller.distanciaRecorrido);
@@ -266,6 +267,7 @@ public class TextManager : MonoBehaviour
         // Si hemos llegado al final del programa actual
         if (lineaActualIndex >= programaActual.secuenciaLineas.Length)
         {
+            RuntimeManager.PlayOneShot(winEvent);
             textoDestino.text += "\n<color=#00FF00>--- FIN DEL PROGRAMA: " + programaActual.nombreDelPrograma.ToUpper() + " ---</color>\n\n";
             lineaActualIndex = 0;
             finished = true;
