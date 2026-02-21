@@ -3592,7 +3592,7 @@ MonoBehaviour:
   minRangeMin: 4
   minRangeMax: 6
   minExtraRange: 3
-  maxExtraRange: 5
+  maxExtraRange: 7
 --- !u!114 &1554259975
 MonoBehaviour:
   m_ObjectHideFlags: 0

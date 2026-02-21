@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: bf24f1b5a8ee31e43bbe2690950c3615
   - enabled: 1
     path: Assets/Scenes/Configuration.unity
-    guid: 6d39f0cd7bcf7c94890e7ee0ffa22ddd
+    guid: 231d8a0b5ff692d45ba297d58ac3f5b2
   - enabled: 1
     path: Assets/Scenes/GameToni.unity
     guid: baec5e55cf9521d41be5b8d60deadc5a
