@@ -901,8 +901,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
-  m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c2e0e70f4cc9e34bb83ebabdf569d2e, type: 2}
+  m_sharedMaterial: {fileID: -3470802775436944738, guid: 7c2e0e70f4cc9e34bb83ebabdf569d2e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3065,8 +3065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16, y: 35}
-  m_SizeDelta: {x: -68, y: -270}
+  m_AnchoredPosition: {x: 0, y: 35}
+  m_SizeDelta: {x: -100, y: -270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503438106
 MonoBehaviour:
@@ -3617,46 +3617,46 @@ MonoBehaviour:
   scrollbar: {fileID: 971936059}
   diccionarioSintaxis:
   - tipo: 0
-    palabraClave: import %
-    colorPalabraClave: {r: 0.8773585, g: 0.57225215, b: 0.012415428, a: 1}
+    palabraClave: import %;
+    colorPalabraClave: {r: 0.7686275, g: 0.40000004, b: 0.21960786, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 3
-    palabraClave: package %
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    palabraClave: package %;
+    colorPalabraClave: {r: 0.76862746, g: 0.4, b: 0.21960784, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 9
-    palabraClave: \npublic class %
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    palabraClave: \npublic class %{
+    colorPalabraClave: {r: 0.76862746, g: 0.4, b: 0.21960784, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 8
-    palabraClave: this.%
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
-    colorInput: {r: 0.6900357, g: 0, b: 0.8018868, a: 1}
+    palabraClave: '    this.% = new %();'
+    colorPalabraClave: {r: 0.76862746, g: 0.4, b: 0.21960784, a: 1}
+    colorInput: {r: 0.7058824, g: 0.41176474, b: 0.5058824, a: 1}
   - tipo: 6
-    palabraClave: \npublic %
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
-    colorInput: {r: 0.23820755, g: 0.5977635, b: 0.9528302, a: 1}
+    palabraClave: \n    public %(){
+    colorPalabraClave: {r: 0.76862746, g: 0.4, b: 0.21960784, a: 1}
+    colorInput: {r: 0.21960786, g: 0.5568628, b: 0.9568628, a: 1}
   - tipo: 12
-    palabraClave: int %
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
-    colorInput: {r: 1, g: 1, b: 1, a: 1}
+    palabraClave: '    protected String %;'
+    colorPalabraClave: {r: 0.76862746, g: 0.4, b: 0.21960784, a: 1}
+    colorInput: {r: 0.7058824, g: 0.4117647, b: 0.5058824, a: 1}
   - tipo: 10
-    palabraClave: \nif %
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    palabraClave: \n    if(%){
+    colorPalabraClave: {r: 0.76862746, g: 0.4, b: 0.21960784, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 11
-    palabraClave: \nfor %
-    colorPalabraClave: {r: 0.87843144, g: 0.57254905, b: 0.011764707, a: 1}
+    palabraClave: \nfor(% in %){
+    colorPalabraClave: {r: 0.76862746, g: 0.4, b: 0.21960784, a: 1}
     colorInput: {r: 1, g: 1, b: 1, a: 1}
   - tipo: 16
-    palabraClave: //%
-    colorPalabraClave: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
-    colorInput: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 1}
+    palabraClave: '    /**\n    * %\n    */'
+    colorPalabraClave: {r: 0.3529412, g: 0.4901961, b: 0.40000004, a: 1}
+    colorInput: {r: 0.3529412, g: 0.49019608, b: 0.4, a: 1}
   misProgramas:
   - nombreDelPrograma: AndroidGame
-    secuenciaLineas: 030000000000000000000000000000000000000009000000060000000c0000000a000000080000000600000010000000100000000b000000080000000a0000000c0000000c000000
+    secuenciaLineas: 030000000000000000000000000000000000000000000000090000000c0000000c0000000c000000090000000800000008000000080000000a000000100000000800000008000000
   - nombreDelPrograma: AndroidFileManager
-    secuenciaLineas: 03000000000000000000000009000000100000000600000008000000100000000a00000008000000060000000b000000080000000a00000008000000100000000c0000000c000000
+    secuenciaLineas: 0300000003000000000000000000000009000000100000000c000000100000000c000000100000000c00000010000000100000000600000010000000100000000800000008000000
   longitudPrograma: 0
   lineasMaximasAntesDeSubir: 12
   alturaDeLinea: 30
@@ -3866,8 +3866,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
-  m_sharedMaterial: {fileID: 1607650636094480399, guid: 740aa7844f5b3c54fab50926d19c1bd7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7c2e0e70f4cc9e34bb83ebabdf569d2e, type: 2}
+  m_sharedMaterial: {fileID: -3470802775436944738, guid: 7c2e0e70f4cc9e34bb83ebabdf569d2e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
