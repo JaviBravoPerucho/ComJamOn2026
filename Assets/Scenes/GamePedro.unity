@@ -3617,6 +3617,27 @@ MonoBehaviour:
   buttonCompile: {fileID: 1546159130}
   dialogue: {fileID: 329370472}
   scrollbar: {fileID: 971936059}
+  typeEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  enterEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  backEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   diccionarioSintaxis:
   - tipo: 0
     palabraClave: '#include "%.h"'
