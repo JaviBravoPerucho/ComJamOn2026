@@ -753,7 +753,7 @@ MonoBehaviour:
   listaDialogos:
   - tipo: 0
     posiblesLineas:
-    - Te has descargado la version correcta de Android Studio?
+    - "Te has descargado la versi\xF3n correcta de Android Studio?"
     - "Buenos d\xEDas, este examen lo har\xEDa yo en nada y menos."
     - "Ve descargando los VirtualDevices y prepara la pr\xE1ctica que el examen comienza
       pronto."
@@ -778,7 +778,7 @@ MonoBehaviour:
     - "\xA1El rango!, lee bien el enunciado.\n"
   - tipo: 6
     posiblesLineas:
-    - Menudo invent te estas haciendo.
+    - "Menudo invent te est\xE1s haciendo."
     - 'Ya dijimos que eso no entraba en el examen.
 
 '

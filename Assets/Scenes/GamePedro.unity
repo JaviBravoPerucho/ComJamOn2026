@@ -1006,11 +1006,11 @@ MonoBehaviour:
     - "Es un milagro que hoy nos veamos aqu\xED."
   - tipo: 2
     posiblesLineas:
-    - "\xBFEstas seguro de que est\xE1 bien eso? Ya lo veremos."
+    - "\xBFEst\xE1s seguro de que est\xE1 bien eso? Ya lo veremos."
     - "Esa variable no me suena muy bien, pero bueno haya t\xFA."
     - Decente.
     - Ya queda poco............... para que se acabe el tiempo.
-    - Continua, sin miedo.
+    - "Contin\xFAa, sin miedo."
     - Ten cuidado con la arquitectura, que eso no es del todo correcto.
     - '...
 
@@ -1051,7 +1051,8 @@ MonoBehaviour:
   - tipo: 9
     posiblesLineas:
     - "Me voy a encargar de revisar tu c\xF3digo a fondo."
-    - "\xBFQue has puesto ah\xED?, lo de respetar la arquitectura no va mucho contigo."
+    - "\xBFQu\xE9 has puesto ah\xED?, lo de respetar la arquitectura no va mucho
+      contigo."
   - tipo: 12
     posiblesLineas:
     - "Nos vemos el a\xF1o que viene."
@@ -1059,10 +1060,10 @@ MonoBehaviour:
     - "L\xEDnea roja."
   - tipo: 11
     posiblesLineas:
-    - Justito pero aprobado estas.
+    - "Justito pero aprobado est\xE1s."
     - "No vengas a pedirme m\xE1s nota, porque el a\xF1o que viene a lo mejor te
       la pido yo a ti."
-    - "Que pena que no te vaya a ver el a\xF1o que viene."
+    - "Qu\xE9 pena que no te vaya a ver el a\xF1o que viene."
   - tipo: 10
     posiblesLineas:
     - Enhorabuena, una arquitectura impecable.
