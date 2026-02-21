@@ -46,6 +46,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Puntuacion: 0
+  Level: 0
+  JuegoIniciado: 0
+  JuegoAcabado: 0
+  wordManager: {fileID: 0}
+  Music:
+    Guid:
+      Data1: -1471083658
+      Data2: 1178275079
+      Data3: 1864292997
+      Data4: 1615078288
+    Path: event:/MusicaMenu
 --- !u!114 &909923420300096930
 MonoBehaviour:
   m_ObjectHideFlags: 0

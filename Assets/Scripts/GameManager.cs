@@ -1,49 +1,96 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using FMOD.Studio;
 
 public class GameManager : MonoBehaviour
 {
-    // Instancia pública accesible desde cualquier script
+    // Singleton
     public static GameManager Instance { get; private set; }
 
-    // Variables globales de ejemplo
+    [Header("Game State")]
     public float Puntuacion;
-
     public int Level;
-
     public bool JuegoIniciado;
     public bool JuegoAcabado;
 
     public WordManager wordManager;
 
+    [Header("Audio")]
+    public EventReference Music;
+
+    private EventInstance musicInstance;
+    private bool musicStarted;
+
     private void Awake()
     {
-        // Si ya existe una instancia y no somos nosotros, nos destruimos
+        // Singleton
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         JuegoIniciado = false;
         JuegoAcabado = false;
-        // Asignamos la instancia
-        Instance = this;
-
-        // Evita que se destruya al cambiar de escena
-        DontDestroyOnLoad(gameObject);
-    }
-
-    void Start()
-    {
-        // Inicialización de variables o lógica de inicio
-        Level = 1; // 1-fede / 2-Tony / 3-Pedro
         Puntuacion = 0;
+
+        // Escuchar cambios de escena
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void Update()
+    private void OnDestroy()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        string sceneName = scene.name;
+
+        bool isGameScene = sceneName.StartsWith("Game");
+        bool isMenuScene = sceneName == "Menu";
+
+        if (isGameScene)
+        {
+            StopMusic();
+        }
+        else
+        {
+            if (!musicStarted)
+            {
+                StartMusic();
+            }
+        }
+    }
+
+    #region Music Control
+
+    private void StartMusic()
+    {
+        if (musicStarted) return;
+
+        musicInstance = RuntimeManager.CreateInstance(Music);
+        musicInstance.start();
+        musicStarted = true;
+    }
+
+    private void StopMusic()
+    {
+        if (!musicStarted) return;
+
+        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        musicInstance.release();
+        musicStarted = false;
+    }
+
+    #endregion
+
+    #region Scene Management
 
     private void ResetPoints()
     {
@@ -60,35 +107,38 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("LevelSelector");
     }
 
+    public void LoadConfigMenu()
+    {
+        ResetPoints();
+        SceneManager.LoadScene("Configuration");
+    }
+
     public void LoadGame(int level)
     {
         JuegoAcabado = false;
         Level = level;
-        ResetPoints(); // Opcional: reiniciar puntos al empezar partida
+        ResetPoints();
 
-        if(level == 1)
+        switch (level)
         {
-            SceneManager.LoadScene("GameFede");
-        }
-        else if(level == 2)
-        {
-            SceneManager.LoadScene("GameToni");
-        }
-        else if(level == 3)
-        {
-            SceneManager.LoadScene("GamePedro");
-        }
-        
-    }
+            case 1:
+                SceneManager.LoadScene("GameFede");
+                break;
 
-    public void LoadConfigMenu()
-    {
-        ResetPoints(); // Opcional: reiniciar puntos al empezar partida
-        SceneManager.LoadScene("Configuration");
+            case 2:
+                SceneManager.LoadScene("GameToni");
+                break;
+
+            case 3:
+                SceneManager.LoadScene("GamePedro");
+                break;
+        }
     }
 
     public void GameOver()
     {
         JuegoAcabado = true;
     }
+
+    #endregion
 }

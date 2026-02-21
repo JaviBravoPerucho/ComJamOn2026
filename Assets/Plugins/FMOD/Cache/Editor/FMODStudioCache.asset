@@ -310,13 +310,14 @@ MonoBehaviour:
   - {fileID: -2239160300564096336}
   - {fileID: -96504050892128418}
   - {fileID: 8219245701837283560}
+  - {fileID: 6815362621867833182}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4158692059359361670}
   StringsBanks:
   - {fileID: 3684939877609796469}
   cacheVersion: 131858
-  cacheTime: 639072857657190029
+  cacheTime: 639072868446676867
   SerializableEventsDict:
   - key: event:/Teclas
     index: 0
@@ -336,6 +337,8 @@ MonoBehaviour:
     index: 7
   - key: event:/victoria
     index: 8
+  - key: event:/MusicaMenu
+    index: 9
 --- !u!114 &720642069849263145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,10 +432,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639072857657190029
+  lastModified: 639072868446676867
   FileSizes:
   - Name: Desktop
-    Value: 1172
+    Value: 1212
   Exists: 1
 --- !u!114 &4158692059359361670
 MonoBehaviour:
@@ -449,11 +452,38 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639072857657170058
+  lastModified: 639072868446666866
   FileSizes:
   - Name: Desktop
-    Value: 303008
+    Value: 694784
   Exists: 1
+--- !u!114 &6815362621867833182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MusicaMenu
+  m_EditorClassIdentifier: 
+  Path: event:/MusicaMenu
+  Guid:
+    Data1: -1471083658
+    Data2: 1178275079
+    Data3: 1864292997
+    Data4: 1615078288
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33515
 --- !u!114 &8219245701837283560
 MonoBehaviour:
   m_ObjectHideFlags: 0
