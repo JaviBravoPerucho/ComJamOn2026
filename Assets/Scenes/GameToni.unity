@@ -3615,6 +3615,27 @@ MonoBehaviour:
   buttonCompile: {fileID: 1546159130}
   dialogue: {fileID: 329370472}
   scrollbar: {fileID: 971936059}
+  typeEvent:
+    Guid:
+      Data1: -1194778259
+      Data2: 1102249599
+      Data3: 1775545010
+      Data4: 2082007335
+    Path: event:/Teclas
+  enterEvent:
+    Guid:
+      Data1: 2002762443
+      Data2: 1183826202
+      Data3: 171790761
+      Data4: -633562128
+    Path: event:/TeclaEnter
+  backEvent:
+    Guid:
+      Data1: 1165723016
+      Data2: 1295669508
+      Data3: 1617998014
+      Data4: 1606999668
+    Path: event:/TeclaBack
   diccionarioSintaxis:
   - tipo: 0
     palabraClave: import %;
