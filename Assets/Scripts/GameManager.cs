@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
         if(level == 1)
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("GameFede");
         }
         else if(level == 2)
         {

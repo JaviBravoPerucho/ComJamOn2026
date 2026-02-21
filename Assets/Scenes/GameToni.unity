@@ -3658,7 +3658,7 @@ MonoBehaviour:
   - nombreDelPrograma: AndroidFileManager
     secuenciaLineas: 0300000003000000000000000000000009000000100000000c000000100000000c000000100000000c00000010000000100000000600000010000000100000000800000008000000
   longitudPrograma: 0
-  lineasMaximasAntesDeSubir: 12
+  lineasMaximasAntesDeSubir: 10
   alturaDeLinea: 30
 --- !u!4 &1554259976
 Transform:
