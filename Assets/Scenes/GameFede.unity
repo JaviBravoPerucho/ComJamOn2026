@@ -151,8 +151,8 @@ MonoBehaviour:
   listaDialogos:
   - tipo: 0
     posiblesLineas:
-    - Bienvenido mi preciado alumno, espero que estes utilizando narratech.
-    - "\xBFEstas listo para hacer un \xE1rbol de comportamiento?"
+    - "Bienvenido mi preciado alumno, espero que est\xE9s utilizando narratech."
+    - "\xBFEst\xE1s listo para hacer un \xE1rbol de comportamiento?"
     - "Adelante, toma asiento, el examen comenzar\xE1 pronto.\n"
   - tipo: 2
     posiblesLineas:
@@ -161,7 +161,7 @@ MonoBehaviour:
     - 'Me gusta esa respuesta.
 
 '
-    - "T\xFA si le sabes a Unity."
+    - "T\xFA s\xED le sabes a Unity."
     - 'Te voy a tener que contratar en Narratech.
 
 '
@@ -195,7 +195,7 @@ MonoBehaviour:
   - tipo: 5
     posiblesLineas:
     - "\xBFNo te sabes las normas o qu\xE9?"
-    - 'Por favor mira bien el enumciado.
+    - 'Por favor mira bien el enunciado.
 
 '
   - tipo: 8
@@ -220,15 +220,15 @@ MonoBehaviour:
     - "La pr\xF3xima vez ser\xE1."
   - tipo: 11
     posiblesLineas:
-    - No esta nada mal, un aprobado es un aprobado.
-    - 'Has a probado la asignatura, enhorabuena.
+    - "No est\xE1 nada mal, un aprobado es un aprobado."
+    - 'Has aprobado la asignatura, enhorabuena.
 
 '
   - tipo: 10
     posiblesLineas:
-    - Te voy a tener que contratar en Narratech, increible trabajo.
+    - "Te voy a tener que contratar en Narratech, incre\xEDble trabajo."
     - "Un poco m\xE1s y podr\xEDas tener un doctorado amigo mio.\n"
-    - "Tu manajo de Unity es sencillamente inmaculado. \xA1Enhorabuena!"
+    - "Tu manejo de Unity es sencillamente inmaculado. \xA1Enhorabuena!"
   dialoguePanel: {fileID: 1125222282}
   dialogueText: {fileID: 930253147}
   timeToLetter: 0.05
