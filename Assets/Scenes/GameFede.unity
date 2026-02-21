@@ -786,7 +786,7 @@ MonoBehaviour:
   - nombreDelPrograma: Tu primer programa
     secuenciaLineas: 00000000000000000300000008000000080000000900000004000000
   - nombreDelPrograma: Arbol de comportamiento
-    secuenciaLineas: 0000000003000000080000000900000004000000050000000700000008000000
+    secuenciaLineas: 0000000003000000080000000900000008000000040000000500000007000000
   longitudPrograma: 0
   lineasMaximasAntesDeSubir: 12
   alturaDeLinea: 30
