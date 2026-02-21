@@ -83,7 +83,12 @@ public class CronoController : MonoBehaviour
 
     public void addTime()
     {
+
         actualTime -= extraTime;
+        if(actualTime <= 0)
+        {
+            actualTime = 0;
+        }
     }
     public bool IsTimeUp()
     {
