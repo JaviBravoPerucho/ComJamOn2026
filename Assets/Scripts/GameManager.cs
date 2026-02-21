@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour
     {
         JuegoAcabado = false;
         Level = level;
+        Debug.Log("LEVEL: " + level);
         ResetPoints();
 
         switch (level)
