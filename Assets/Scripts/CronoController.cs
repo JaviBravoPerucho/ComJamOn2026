@@ -43,7 +43,11 @@ public class CronoController : MonoBehaviour
             return;
         }
 
-        actualTime += Time.deltaTime;
+        if (!GameManager.Instance.gamePaused)
+        {
+            actualTime += Time.deltaTime;
+        }
+        
 
         if (actualTime >= maxTime)
         {

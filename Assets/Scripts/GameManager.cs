@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private EventInstance musicInstance;
     private bool musicStarted;
+    public bool gamePaused;
 
     public void ButtonSound()
     {
@@ -43,10 +44,16 @@ public class GameManager : MonoBehaviour
 
         JuegoIniciado = false;
         JuegoAcabado = false;
+        gamePaused = false;
         Puntuacion = 0;
 
         // Escuchar cambios de escena
         SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    public void PauseGame(bool paused)
+    {
+        GameManager.Instance.gamePaused = paused;
     }
 
     private void OnDestroy()
