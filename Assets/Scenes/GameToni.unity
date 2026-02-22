@@ -6622,7 +6622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 920429160687235946, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: pulseSpeed
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 920429160687235946, guid: 1c4ffbf83f370f5499420bc497431700, type: 3}
       propertyPath: startPulsePercentage
