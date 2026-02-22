@@ -1041,7 +1041,7 @@ MonoBehaviour:
     - -0.5 en la nota final, por listo.
     - "\xBFAcaso he explicado eso en clase?"
     - Yo flipo contigo.
-    - "Una de esas m\xE1s y nos vemos en la extraordinaria."
+    - "Una m\xE1s de esas y nos vemos en la extraordinaria."
   - tipo: 1
     posiblesLineas:
     - Adelante, te quedan 30 segundos.
@@ -1069,7 +1069,7 @@ MonoBehaviour:
     posiblesLineas:
     - "Nos vemos el a\xF1o que viene."
     - "Ni tus pr\xE1cticas, ni tu examen merecen la pena. Hasta el a\xF1o que viene."
-    - "L\xEDnea roja."
+    - "Has un inclumplido una l\xEDnea roja. Nos vemos en la extraordinaria."
   - tipo: 11
     posiblesLineas:
     - "Justito pero aprobado est\xE1s."
