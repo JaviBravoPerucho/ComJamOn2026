@@ -1042,6 +1042,13 @@ MonoBehaviour:
   lineInterval: 0.08
   compileDuration: 5
   dialogue: {fileID: 47909503}
+  lineEvent:
+    Guid:
+      Data1: 2098790066
+      Data2: 1185337771
+      Data3: -1434050900
+      Data4: 2123692405
+    Path: event:/Comando
 --- !u!114 &334344277
 MonoBehaviour:
   m_ObjectHideFlags: 0

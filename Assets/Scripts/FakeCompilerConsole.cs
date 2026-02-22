@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMODUnity;
 
 public class FakeCompilerConsole : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class FakeCompilerConsole : MonoBehaviour
     private Queue<string> lines = new Queue<string>();
     List<string> wordList = new List<string>();
     private float nota = 0.0f;
+
+    public EventReference lineEvent;
 
     public void StartCompilation()
     {
@@ -64,6 +67,8 @@ public class FakeCompilerConsole : MonoBehaviour
 
     private string GenerarLinea(List<string> palabras)
     {
+        RuntimeManager.PlayOneShot(lineEvent);
+
         float errorChance = Mathf.Clamp01((5f - nota) / 5f);      // nota baja = más errores
         float warningChance = Mathf.Clamp01((8f - nota) / 8f);    // nota media = warnings
 

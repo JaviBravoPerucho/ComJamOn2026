@@ -258,6 +258,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 239456
   Exists: 1
+--- !u!114 &-160330117632964684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Comando
+  m_EditorClassIdentifier: 
+  Path: event:/Comando
+  Guid:
+    Data1: 2098790066
+    Data2: 1185337771
+    Data3: -1434050900
+    Data4: 2123692405
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 258
 --- !u!114 &-96504050892128418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,13 +339,14 @@ MonoBehaviour:
   - {fileID: 8219245701837283560}
   - {fileID: 6815362621867833182}
   - {fileID: 4347342692541088261}
+  - {fileID: -160330117632964684}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4158692059359361670}
   StringsBanks:
   - {fileID: 3684939877609796469}
   cacheVersion: 131858
-  cacheTime: 639072914923031808
+  cacheTime: 639073545923823374
   SerializableEventsDict:
   - key: event:/Teclas
     index: 0
@@ -342,6 +370,8 @@ MonoBehaviour:
     index: 9
   - key: event:/Boton
     index: 10
+  - key: event:/Comando
+    index: 11
 --- !u!114 &720642069849263145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,10 +465,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639072914923031808
+  lastModified: 639073545923823374
   FileSizes:
   - Name: Desktop
-    Value: 1248
+    Value: 1296
   Exists: 1
 --- !u!114 &4158692059359361670
 MonoBehaviour:
@@ -455,10 +485,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639072914923011841
+  lastModified: 639073545923803383
   FileSizes:
   - Name: Desktop
-    Value: 700256
+    Value: 705600
   Exists: 1
 --- !u!114 &4347342692541088261
 MonoBehaviour:
