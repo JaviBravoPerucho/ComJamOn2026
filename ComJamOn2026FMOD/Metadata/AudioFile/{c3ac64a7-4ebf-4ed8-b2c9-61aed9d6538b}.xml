@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c3ac64a7-4ebf-4ed8-b2c9-61aed9d6538b}">
+		<property name="assetPath">
+			<value>derrota.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.9853061224489796</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ff709737-269d-4367-a670-114941a5305f}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class ShowGrade : MonoBehaviour
@@ -9,7 +10,12 @@ public class ShowGrade : MonoBehaviour
     private GameObject notaPanel;
 
     [SerializeField]
-    private Dialogue dialogue;  
+    private Dialogue dialogue;
+
+    [SerializeField]
+    private EventReference notaMusica;
+    [SerializeField]
+    private EventReference notaMala;
 
     private void FixedUpdate()
     {
@@ -20,20 +26,24 @@ public class ShowGrade : MonoBehaviour
             if (elapsedTime > timeToShow) { 
                 elapsedTime = 0;
                 if(notaPanel)notaPanel.SetActive(true);
+                
                 if (dialogue)
                 {
                     float nota = GameManager.Instance.Puntuacion;
                     Debug.Log("TO NOTA:" + nota);
                     if(nota < 5.0)
                     {
+                        RuntimeManager.PlayOneShot(notaMala);
                         dialogue.LanzarDialogo(TipoDialogo.NotaMala);
                     }
                     else if(nota < 8)
                     {
+                        RuntimeManager.PlayOneShot(notaMusica);
                         dialogue.LanzarDialogo(TipoDialogo.NotaMedia);
                     }
                     else
                     {
+                        RuntimeManager.PlayOneShot(notaMusica);
                         dialogue.LanzarDialogo(TipoDialogo.BuenaNota);
                     }
                     

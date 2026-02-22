@@ -211,6 +211,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 950
   Exists: 1
+--- !u!114 &-2694518008255419069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NotaMala
+  m_EditorClassIdentifier: 
+  Path: event:/NotaMala
+  Guid:
+    Data1: 1386833054
+    Data2: 1092391039
+    Data3: -656346466
+    Data4: -688243463
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1985
 --- !u!114 &-2239160300564096336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,13 +367,15 @@ MonoBehaviour:
   - {fileID: 6815362621867833182}
   - {fileID: 4347342692541088261}
   - {fileID: -160330117632964684}
+  - {fileID: 8884276606739561379}
+  - {fileID: -2694518008255419069}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4158692059359361670}
   StringsBanks:
   - {fileID: 3684939877609796469}
   cacheVersion: 131858
-  cacheTime: 639073545923823374
+  cacheTime: 639073558071315531
   SerializableEventsDict:
   - key: event:/Teclas
     index: 0
@@ -372,6 +401,10 @@ MonoBehaviour:
     index: 10
   - key: event:/Comando
     index: 11
+  - key: event:/MostrarNota
+    index: 12
+  - key: event:/NotaMala
+    index: 13
 --- !u!114 &720642069849263145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,10 +498,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639073545923823374
+  lastModified: 639073558071315531
   FileSizes:
   - Name: Desktop
-    Value: 1296
+    Value: 1388
   Exists: 1
 --- !u!114 &4158692059359361670
 MonoBehaviour:
@@ -485,10 +518,10 @@ MonoBehaviour:
   Path: ComJamOn2026FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639073545923803383
+  lastModified: 639073558071305396
   FileSizes:
   - Name: Desktop
-    Value: 705600
+    Value: 774624
   Exists: 1
 --- !u!114 &4347342692541088261
 MonoBehaviour:
@@ -622,3 +655,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8884276606739561379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MostrarNota
+  m_EditorClassIdentifier: 
+  Path: event:/MostrarNota
+  Guid:
+    Data1: 543709895
+    Data2: 1267372718
+    Data3: 1220705979
+    Data4: 636170976
+  Banks:
+  - {fileID: 4158692059359361670}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3552

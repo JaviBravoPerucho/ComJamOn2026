@@ -1064,6 +1064,20 @@ MonoBehaviour:
   timeToShow: 3
   notaPanel: {fileID: 2044121858}
   dialogue: {fileID: 47909503}
+  notaMusica:
+    Guid:
+      Data1: 543709895
+      Data2: 1267372718
+      Data3: 1220705979
+      Data4: 636170976
+    Path: event:/MostrarNota
+  notaMala:
+    Guid:
+      Data1: 1386833054
+      Data2: 1092391039
+      Data3: -656346466
+      Data4: -688243463
+    Path: event:/NotaMala
 --- !u!1 &414885530
 GameObject:
   m_ObjectHideFlags: 0

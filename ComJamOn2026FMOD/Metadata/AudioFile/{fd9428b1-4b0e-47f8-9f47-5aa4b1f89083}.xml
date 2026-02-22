@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{fd9428b1-4b0e-47f8-9f47-5aa4b1f89083}">
+		<property name="assetPath">
+			<value>nota.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.552</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ff709737-269d-4367-a670-114941a5305f}</destination>
+		</relationship>
+	</object>
+</objects>
